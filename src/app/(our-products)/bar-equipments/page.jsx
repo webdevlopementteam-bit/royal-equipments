@@ -5,7 +5,10 @@ export const metadata = {
   title: "Best Bar Equipments Manufacturer - Royal Equipments",
   description:
     "Royal Equipments – Leading bar equipments manufacturer offering premium-quality bar tools, counters & accessories for pubs. Order now!",
-  keywords: ["", ""],
+  keywords: [
+    "Bar Equipments Manufacturer",
+    "Bar Equipments Manufacturer in Delhi",
+  ],
 
   alternates: {
     canonical: "https://www.royalequipments.in/bar-equipments/",

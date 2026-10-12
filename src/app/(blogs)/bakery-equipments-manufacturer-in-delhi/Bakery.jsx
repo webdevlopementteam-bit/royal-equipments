@@ -53,7 +53,7 @@ export default function BakeryEquipmentBlog() {
             lakhs — choosing the wrong{" "}
             <Link
               href="/contact-us"
-              className="font-semibold text-[#2F3192] no-underline transition-colors hover:text-indigo-900"
+              className="font-semibold text-blue-600 no-underline transition-colors hover:text-indigo-900"
             >
               bakery equipments manufacturer in Delhi
             </Link>
@@ -266,7 +266,7 @@ export default function BakeryEquipmentBlog() {
             This is where the right{" "}
             <Link
               href="/bakery-equipments-manufacturer"
-              className="font-semibold text-[#2F3192] no-underline transition-colors hover:text-indigo-900"
+              className="font-semibold text-blue-600 no-underline transition-colors hover:text-indigo-900"
             >
               bakery equipments manufacturer in Delhi
             </Link>{" "}
@@ -783,7 +783,7 @@ export default function BakeryEquipmentBlog() {
               Choosing the right{" "}
               <Link
                 href="/contact-us"
-                className="font-semibold text-[#2F3192] no-underline transition-colors hover:text-indigo-900"
+                className="font-semibold text-blue-600 no-underline transition-colors hover:text-indigo-900"
               >
                 bakery equipments manufacturer in Delhi
               </Link>{" "}

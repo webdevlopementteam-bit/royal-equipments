@@ -7,7 +7,7 @@ export default function Footer() {
     { name: "Home", href: "/" },
     { name: "About us", href: "/about" },
     { name: "Our Products", href: "/our-products" },
-    { name: "Our Clients", href: "/our-clients" },
+    { name: "Our Clients", href: "/our-client" },
     { name: "Brands", href: "/brands" },
     { name: "Blog", href: "/blog" },
     { name: "Contact us", href: "/contact-us" },
@@ -24,7 +24,7 @@ export default function Footer() {
 
   return (
     <footer className="bg-slate-900 text-slate-400 border-t border-slate-800 z-10">
-      <div className="max-w-8xl mx-auto px-4 sm:px-8 lg:px-35 py-10">
+      <div className="max-w-8xl mx-auto px-4 sm:px-8 lg:px-35 pt-10">
         {/* ================= MAIN FOOTER GRID ================= */}
         <div className="grid grid-cols-1 md:grid-cols-12 lg:grid-cols-24 gap-4 lg:gap-6">
           {/* ================= ABOUT US (Col span 4) ================= */}
@@ -186,7 +186,11 @@ export default function Footer() {
       <div className="bg-slate-950 py-4 border-t border-slate-800/80">
         <div className="max-w-6xl mx-auto px-4 text-center text-[15px] lg:text-md text-slate-400">
           Copyright © 2026. Powered & Maintained by{" "}
-          <Link href={"/"} className="font-semibold text-amber-500">
+          <Link
+            href={"https://www.cybertricksmedia.com/"}
+            target="_blank"
+            className="font-semibold text-amber-500"
+          >
             CYBERTRICKS Media Pvt Ltd
           </Link>
         </div>

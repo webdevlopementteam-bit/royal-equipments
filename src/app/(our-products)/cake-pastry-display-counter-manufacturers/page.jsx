@@ -6,7 +6,10 @@ export const metadata = {
     "Best Cake Pastry Display Counter Manufacturers in Delhi | Royal Equipments",
   description:
     "Royal Equipments is a trusted cake pastry display Counter manufacturers in Delhi, offering stylish, durable counters to keep cakes fresh and visually appealing.",
-  keywords: ["", ""],
+  keywords: [
+    "Cake Pastry Display Counter Manufacturers",
+    "Cake Pastry Display Counter Manufacturers in Delhi",
+  ],
 
   alternates: {
     canonical:

@@ -60,7 +60,7 @@ export default function BakeryOvenGuide() {
           for years. If you are looking for a reliable{" "}
           <Link
             href="/contact-us"
-            className="text-[#2F3192] font-semibold no-underline hover:text-[#232570] transition-colors"
+            className="text-blue-600 font-semibold no-underline hover:text-[#232570] transition-colors"
           >
             bakery oven dealer in Delhi
           </Link>
@@ -187,7 +187,7 @@ export default function BakeryOvenGuide() {
             That is why choosing a trusted{" "}
             <Link
               href="/bakery-equipments-manufacturer"
-              className="text-[#2F3192] font-semibold no-underline hover:text-[#232570] transition-colors"
+              className="text-blue-600 font-semibold no-underline hover:text-[#232570] transition-colors"
             >
               bakery oven dealer in Delhi
             </Link>{" "}
@@ -453,7 +453,7 @@ export default function BakeryOvenGuide() {
           <p className="mb-5 text-slate-700">
             <Link
               href="https://www.royalequipments.in/"
-              className="text-[#2F3192] font-semibold no-underline hover:text-[#232570] transition-colors"
+              className="text-blue-600 font-semibold no-underline hover:text-[#232570] transition-colors"
             >
               Royal Equipments
             </Link>{" "}
@@ -727,7 +727,7 @@ export default function BakeryOvenGuide() {
             business part. As a trusted{" "}
             <Link
               href="/contact-us"
-              className="text-[#2F3192] font-bold no-underline hover:text-[#232570] transition-colors"
+              className="text-blue-600 font-bold no-underline hover:text-[#232570] transition-colors"
             >
               Bakery Oven Dealer in Delhi
             </Link>

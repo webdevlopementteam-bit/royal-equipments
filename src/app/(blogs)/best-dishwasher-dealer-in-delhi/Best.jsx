@@ -59,7 +59,7 @@ export default function BlogPost() {
             operation. That’s why choosing the right{" "}
             <Link
               href="/dishwasher-dealer-in-delhi"
-              className="text-[#2F3191] font-semibold no-underline hover:text-[#22246F] transition-colors"
+              className="text-blue-600 font-semibold no-underline hover:text-[#22246F] transition-colors"
             >
               Dishwasher Dealer in Delhi
             </Link>{" "}
@@ -102,7 +102,7 @@ export default function BlogPost() {
               hours put real pressure on equipment. A good{" "}
               <Link
                 href="/"
-                className="text-[#2F3191] font-semibold no-underline hover:text-[#22246F] transition-colors"
+                className="text-blue-600 hover:text-[#2F3191] font-semibold no-underline hover:text-[#22246F] transition-colors"
               >
                 dishwasher dealer in Delhi
               </Link>{" "}
@@ -293,7 +293,7 @@ export default function BlogPost() {
               picking an experienced{" "}
               <Link
                 href="/about-us"
-                className="text-[#2F3191] font-semibold no-underline hover:text-[#22246F] transition-colors"
+                className="text-blue-600  font-semibold no-underline hover:text-[#22246F] transition-colors"
               >
                 dishwasher dealer in Delhi
               </Link>{" "}
@@ -581,7 +581,7 @@ export default function BlogPost() {
               <div className="pt-2">
                 <Link
                   href="/contact-us"
-                  className="inline-block bg-white text-[#2F3191] font-semibold px-6 py-3 rounded-xl shadow-md hover:bg-slate-50 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 text-[17px] lg:text-[19px] no-underline"
+                  className="inline-block bg-white text-[#2F3191] font-semibold px-6 py-3 rounded-xl shadow-md hover:bg-blue-600 hover:text-white hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 text-[17px] lg:text-[19px] no-underline"
                 >
                   Get in touch with Royal Equipments
                 </Link>{" "}

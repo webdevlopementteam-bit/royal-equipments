@@ -56,7 +56,7 @@ export default function Top() {
             last. And behind every kitchen that lasts are the right{" "}
             <Link
               href="/contact-us"
-              className="font-semibold text-[#2F3191] no-underline transition-colors hover:text-[#242675]"
+              className="font-semibold text-blue-600 no-underline transition-colors hover:text-[#242675]"
             >
               commercial kitchen equipment manufacturers
             </Link>
@@ -322,7 +322,7 @@ export default function Top() {
             kitchen — and one of the first things experienced{" "}
             <Link
               href="/[https://www.royalequipments.in/](https://www.royalequipments.in/)"
-              className="font-semibold text-[#2F3191] no-underline transition-colors hover:text-[#242675]"
+              className="font-semibold text-blue-600 no-underline transition-colors hover:text-[#242675]"
             >
               commercial kitchen equipment manufacturers
             </Link>{" "}
@@ -656,7 +656,7 @@ export default function Top() {
               The right{" "}
               <Link
                 href="/contact-us"
-                className="font-semibold text-[#2F3191] no-underline transition-colors hover:text-[#242675]"
+                className="font-semibold text-blue-600 no-underline transition-colors hover:text-[#242675]"
               >
                 commercial kitchen equipment manufacturer
               </Link>{" "}

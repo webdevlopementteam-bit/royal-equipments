@@ -5,7 +5,7 @@ export const metadata = {
   title: "Top Exhaust Hood Manufacturers in Delhi - Royal Equipments",
   description:
     "Royal Equipments is a reliable exhaust hood manufacturers in Delhi, offering efficient, durable kitchen hoods for commercial kitchens and hotels.",
-  keywords: ["", ""],
+  keywords: ["Exhaust Hood Manufacturers in Delhi"],
 
   alternates: {
     canonical:

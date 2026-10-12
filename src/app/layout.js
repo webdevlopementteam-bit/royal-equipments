@@ -17,7 +17,7 @@ export const metadata = {
   title: "Best Commercial Kitchen Equipment Manufacturers in Delhi",
   description:
     "Royal Equipments – Leading Commercial Kitchen Equipment Manufacturers in Delhi. We offer durable, high-performance kitchen solutions for hotels, restaurants & bakeries. Get a free quote today!",
-  keywords: ["", ""],
+  keywords: ["Commercial Kitchen Equipment Manufacturers", "Commercial Kitchen Equipment Manufacturers in Delhi","Royal Equipments"],
   icons: {
     icon:'/home/logo.png'
   },

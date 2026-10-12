@@ -5,7 +5,7 @@ export const metadata = {
   title: "Best Chapati Making Machine Manufacturer | Royal Equipment",
   description:
     "Looking for a Chapati Making Machine? Royal Equipment offers durable automatic machines for hotels and restaurants for fast, hygienic chapati production daily",
-  keywords: ["", ""],
+  keywords: ["Chapati Making Machine", "Chapati Making Machine Manufacturer"],
 
   alternates: {
     canonical: "https://www.royalequipments.in/chapati-equipments/",

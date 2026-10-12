@@ -6,7 +6,10 @@ export const metadata = {
     "Stainless Steel - SS Work Table Manufacturer in Delhi | Royal Equipments.",
   description:
     "Royal Equipments is a trusted SS work table manufacturer in Delhi, offering strong, hygienic stainless steel work tables for commercial and industrial use.",
-  keywords: ["", ""],
+  keywords: [
+    "SS Work Table Manufacturer",
+    "SS Work Table Manufacturer in Delhi",
+  ],
 
   alternates: {
     canonical: "https://www.royalequipments.in/stainless-steel-table/",

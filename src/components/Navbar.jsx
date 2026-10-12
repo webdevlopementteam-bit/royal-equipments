@@ -190,7 +190,7 @@ export default function Navbar() {
               onClick={closeMenus}
               className="flex items-center shrink-0 group"
             >
-              <div className="relative w-36 h-14 sm:w-40 sm:h-14">
+              <div className="relative w-30 h-15 sm:w-40 sm:h-14">
                 <Image
                   src="/home/logo.png"
                   alt="Royal Logo"

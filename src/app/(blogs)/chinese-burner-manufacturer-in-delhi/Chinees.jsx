@@ -57,8 +57,8 @@ export default function ChineseBurnerPage() {
             Chinese burners are widely used in commercial kitchens for fast and
             efficient cooking. If you are searching for a reliable{" "}
             <Link
-              href="#"
-              className="text-[#2F3192] font-bold no-underline hover:text-[#232570] transition-colors"
+              href="/our-products"
+              className="text-blue-600 font-bold no-underline hover:text-[#232570] transition-colors"
             >
               Chinese Burner Manufacturer in Delhi
             </Link>
@@ -198,8 +198,8 @@ export default function ChineseBurnerPage() {
 
           <p className="mb-6 text-slate-700">
             <Link
-              href="#"
-              className="text-[#2F3192] font-bold no-underline hover:text-[#232570] transition-colors"
+              href="/"
+              className="text-blue-600 font-bold no-underline hover:text-[#232570] transition-colors"
             >
               Royal Equipments
             </Link>{" "}

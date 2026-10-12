@@ -25,9 +25,27 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+/* =========================================
+CLIENT MARQUEE
+========================================= */
+
 .client-marquee {
+  position: relative;
   width: 100%;
   overflow: hidden;
+  cursor: grab;
+  touch-action: pan-y;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.client-marquee.is-dragging {
+  cursor: grabbing;
+}
+
+.client-marquee.is-dragging * {
+  cursor: grabbing;
 }
 
 .client-track {
@@ -35,21 +53,21 @@ body {
   width: max-content;
   gap: 18px;
   will-change: transform;
+  transform: translate3d(0, 0, 0);
 }
 
-.client-track-left {
-  animation: marquee-left 100s linear infinite;
-}
-
+/* JavaScript controls both automatic and manual movement */
+.client-track-left,
 .client-track-right {
-  animation: marquee-right 100s linear infinite;
+  animation: none !important;
 }
 
-.client-marquee:hover .client-track {
-  animation-play-state: paused;
-}
+/* =========================================
+CLIENT CARD
+========================================= */
 
 .client-card {
+  position: relative;
   flex: 0 0 170px;
   width: 170px;
   height: 125px;
@@ -57,38 +75,25 @@ body {
   align-items: center;
   justify-content: center;
   padding: 24px;
-  background: white;
+  background: #ffffff;
   border: 1px solid rgb(226 232 240 / 0.9);
   border-radius: 16px;
   box-shadow: 0 4px 20px rgb(15 23 42 / 0.05);
-  transition: all 300ms ease;
+  transition:
+    border-color 300ms ease,
+    box-shadow 300ms ease;
 }
 
-.client-card:hover {
-  transform: translateY(-4px);
-  border-color: rgb(47 49 146 / 0.2);
-  box-shadow: 0 12px 35px rgb(47 49 146 / 0.12);
-}
-
-@keyframes marquee-left {
-  from {
-    transform: translateX(0);
-  }
-
-  to {
-    transform: translateX(calc(-50% - 9px));
+@media (hover: hover) and (pointer: fine) {
+  .client-card:hover {
+    border-color: rgb(47 49 146 / 0.2);
+    box-shadow: 0 12px 35px rgb(47 49 146 / 0.12);
   }
 }
 
-@keyframes marquee-right {
-  from {
-    transform: translateX(calc(-50% - 9px));
-  }
-
-  to {
-    transform: translateX(0);
-  }
-}
+/* =========================================
+TABLET
+========================================= */
 
 @media (min-width: 640px) {
   .client-track {
@@ -101,6 +106,10 @@ body {
   }
 }
 
+/* =========================================
+DESKTOP / LG
+========================================= */
+
 @media (min-width: 1024px) {
   .client-track {
     gap: 18px;
@@ -112,10 +121,27 @@ body {
   }
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .client-track-left,
-  .client-track-right {
-    animation-play-state: paused;
+/* =========================================
+MOBILE TOUCH
+========================================= */
+
+@media (hover: none) and (pointer: coarse) {
+  .client-marquee .client-card:hover {
+    border-color: rgb(226 232 240 / 0.9);
+    box-shadow: 0 4px 20px rgb(15 23 42 / 0.05);
   }
 }
 
+/* =========================================
+ACCESSIBILITY
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .client-track {
+    will-change: auto;
+  }
+
+  .client-card {
+    transition: none;
+  }
+}

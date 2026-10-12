@@ -59,7 +59,7 @@ export default function Hotel() {
             That’s exactly the gap Royal Equipments fills. As a trusted{" "}
             <Link
               href="/about-us"
-              className="text-[#0056b3] font-bold  hover:text-blue-800 transition-colors "
+              className="text-blue-600 hover:text-[#0056b3] font-bold   transition-colors "
             >
               hotel kitchen equipment manufacturer in Delhi
             </Link>
@@ -79,7 +79,7 @@ export default function Hotel() {
           <p className="mb-6">
             <Link
               href="/"
-              className="text-[#0056b3] font-bold no-underline hover:text-blue-800 transition-colors "
+              className="text-blue-600 font-bold no-underline hover:text-blue-800 transition-colors "
             >
               Royal Equipments
             </Link>{" "}
