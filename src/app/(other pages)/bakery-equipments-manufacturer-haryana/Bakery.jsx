@@ -158,7 +158,7 @@ export default function Bakery() {
               performance, and efficiency for bakeries, hotels, restaurants, and
               food businesses. As a leading{" "}
               <Link
-                href={"/"}
+                href={"https://www.royalequipments.in/"}
                 className="text-blue-600 hover:text-blue-900 font-bold"
               >
                 Bakery Equipments Manufacturer in Haryana
@@ -187,7 +187,7 @@ export default function Bakery() {
             </p>
             <p className="mb-6">
               As a reliable{" "}
-              <Link href={"/contact-us"} className="text-blue-600 font-bold">
+              <Link href={"https://www.royalequipments.in/contact-us/"} className="text-blue-600 font-bold">
                 Bakery Equipments Supplier in Haryana
               </Link>
               , we focus on delivering equipment that meets modern industry
@@ -310,7 +310,7 @@ export default function Bakery() {
             <p className="mb-4">
               Upgrade your bakery business with modern and efficient machinery
               from{" "}
-              <Link href="/" className="text-blue-600 font-bold">
+              <Link href="https://www.royalequipments.in/" className="text-blue-600 font-bold">
                 Royal Equipments
               </Link>
               . As a trusted Bakery Equipments Manufacturer and Supplier in

@@ -128,9 +128,13 @@ export default function ChineseBurnerSection() {
           specially designed to produce intense heat that is essential for
           authentic Chinese cooking, stir-frying, and fast food preparation. If
           you are searching for a trusted{" "}
-          <strong className="text-gray-900">
+          <Link
+            href={"https://www.royalequipments.in/contact-us/"}
+            target="_blank"
+            className="text-blue-600 hover:text-blue-800 font-bold"
+          >
             Chinese Burner Manufacturer in Delhi
-          </strong>
+          </Link>
           , <strong className="text-gray-900">Royal Equipments</strong> offers
           high-quality commercial burners designed for restaurants, hotels, and
           catering businesses.
@@ -200,8 +204,14 @@ export default function ChineseBurnerSection() {
 
         <p>
           When you choose a Chinese burner from{" "}
-          <strong className="text-gray-900">Royal Equipments</strong>, you get
-          equipment that combines{" "}
+          <Link
+            href={"https://www.royalequipments.in/"}
+            target="_blank"
+            className="text-blue-600 hover:text-blue-800 font-bold"
+          >
+            Royal Equipments
+          </Link>
+          , you get equipment that combines{" "}
           <strong className="text-gray-900">
             performance, durability, and professional cooking efficiency
           </strong>
