@@ -23,7 +23,7 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="bg-slate-900 text-slate-400 border-t border-slate-800 z-10">
+    <footer className="bg-slate-900 text-slate-400 border-t border-slate-800 z-10 ">
       <div className="max-w-8xl mx-auto px-4 sm:px-8 lg:px-35 pt-10">
         {/* ================= MAIN FOOTER GRID ================= */}
         <div className="grid grid-cols-1 md:grid-cols-12 lg:grid-cols-24 gap-4 lg:gap-6">
@@ -183,11 +183,11 @@ export default function Footer() {
       </div>
 
       {/* ================= COPYRIGHT ================= */}
-      <div className="bg-slate-950 py-4 border-t border-slate-800/80">
+      <div className="bg-slate-950 py-4 border-t border-slate-800/80 mt-2">
         <div className="max-w-6xl mx-auto px-4 text-center text-[15px] lg:text-md text-slate-400">
           Copyright © 2026. Powered & Maintained by{" "}
           <Link
-            href={"https://www.cybertricksmedia.com/"}
+            href="https://www.cybertricksmedia.com/"
             target="_blank"
             className="font-semibold text-amber-500"
           >

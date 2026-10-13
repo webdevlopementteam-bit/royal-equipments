@@ -321,7 +321,7 @@ export default function Top() {
             Stainless steel is the foundation of every serious commercial
             kitchen — and one of the first things experienced{" "}
             <Link
-              href="/[https://www.royalequipments.in/](https://www.royalequipments.in/)"
+              href="/"
               className="font-semibold text-blue-600 no-underline transition-colors hover:text-[#242675]"
             >
               commercial kitchen equipment manufacturers

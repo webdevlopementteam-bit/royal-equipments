@@ -369,7 +369,7 @@ export default function Contact() {
                       alt="CAPTCHA verification image"
                       width={150}
                       height={56}
-                      className="h-14 w-auto max-w-[150px] rounded-md border border-slate-200 bg-white object-contain p-1"
+                      className="h-12 w-auto max-w-[150px] rounded-md  object-contain p-1"
                     />
                   </div>
                 </div>
