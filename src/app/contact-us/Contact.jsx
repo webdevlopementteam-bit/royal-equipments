@@ -12,6 +12,7 @@ import {
   MessageCircle,
   ArrowUpRight,
 } from "lucide-react";
+import Image from "next/image";
 
 const contactSchema = z.object({
   firstName: z.string().trim().min(1, "First name is required."),
@@ -42,13 +43,19 @@ export default function Contact() {
   const [status, setStatus] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
 
+  // CAPTCHA state
+  const [isCaptchaVerified, setIsCaptchaVerified] = useState(false);
+  const [captchaError, setCaptchaError] = useState("");
+
   const inputClass =
     "w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3.5 text-[16px] text-slate-800 outline-none transition-all duration-300 placeholder:text-slate-400 hover:border-[#2F3192]/40 focus:border-[#2F3192] focus:bg-white focus:ring-4 focus:ring-[#2F3192]/10";
+
   const labelClass = "mb-2 block text-[16px] font-medium text-slate-700";
   const textClass = "text-[16px] leading-relaxed";
 
   const handleChange = (e) => {
     const { name, value } = e.target;
+
     const updatedValue =
       name === "mobileNo" ? value.replace(/\D/g, "").slice(0, 12) : value;
 
@@ -57,10 +64,20 @@ export default function Contact() {
     setStatus("");
   };
 
+  // CAPTCHA checkbox handler
+  const handleCaptchaChange = (e) => {
+    const checked = e.target.checked;
+
+    setIsCaptchaVerified(checked);
+    setCaptchaError("");
+    setStatus("");
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     setStatus("");
 
+    // Validate all contact form fields
     const result = contactSchema.safeParse(formData);
 
     if (!result.success) {
@@ -68,16 +85,31 @@ export default function Contact() {
 
       result.error.issues.forEach((issue) => {
         const field = issue.path[0];
+
         if (!fieldErrors[field]) {
           fieldErrors[field] = issue.message;
         }
       });
 
       setErrors(fieldErrors);
+
+      // Also validate CAPTCHA when the form fields are invalid
+      if (!isCaptchaVerified) {
+        setCaptchaError("Please confirm that you are not a robot.");
+      }
+
       return;
     }
 
     setErrors({});
+
+    // Prevent submission until CAPTCHA is checked
+    if (!isCaptchaVerified) {
+      setCaptchaError("Please confirm that you are not a robot.");
+      return;
+    }
+
+    setCaptchaError("");
     setIsSubmitting(true);
 
     try {
@@ -120,8 +152,8 @@ export default function Contact() {
 
   return (
     <div className="min-h-screen overflow-hidden bg-white text-slate-800">
-      {" "}
       <Breadcrumb title="Contact" />
+
       <main className="mx-auto w-full max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
         <div className="mx-auto mb-12 max-w-3xl text-center">
           <span className="inline-flex items-center rounded-full border border-[#2F3192]/15 bg-[#2F3192]/5 px-5 py-2 text-[15px] font-medium text-[#2F3192]">
@@ -169,6 +201,7 @@ export default function Contact() {
                   <label htmlFor="firstName" className={labelClass}>
                     First Name *
                   </label>
+
                   <input
                     id="firstName"
                     type="text"
@@ -177,9 +210,17 @@ export default function Contact() {
                     value={formData.firstName}
                     onChange={handleChange}
                     className={inputClass}
+                    aria-invalid={Boolean(errors.firstName)}
+                    aria-describedby={
+                      errors.firstName ? "firstName-error" : undefined
+                    }
                   />
+
                   {errors.firstName && (
-                    <p className="mt-2 text-sm text-red-600">
+                    <p
+                      id="firstName-error"
+                      className="mt-2 text-sm text-red-600"
+                    >
                       {errors.firstName}
                     </p>
                   )}
@@ -189,6 +230,7 @@ export default function Contact() {
                   <label htmlFor="lastName" className={labelClass}>
                     Last Name *
                   </label>
+
                   <input
                     id="lastName"
                     type="text"
@@ -197,9 +239,17 @@ export default function Contact() {
                     value={formData.lastName}
                     onChange={handleChange}
                     className={inputClass}
+                    aria-invalid={Boolean(errors.lastName)}
+                    aria-describedby={
+                      errors.lastName ? "lastName-error" : undefined
+                    }
                   />
+
                   {errors.lastName && (
-                    <p className="mt-2 text-sm text-red-600">
+                    <p
+                      id="lastName-error"
+                      className="mt-2 text-sm text-red-600"
+                    >
                       {errors.lastName}
                     </p>
                   )}
@@ -210,6 +260,7 @@ export default function Contact() {
                 <label htmlFor="mobileNo" className={labelClass}>
                   Mobile Number *
                 </label>
+
                 <input
                   id="mobileNo"
                   type="tel"
@@ -219,9 +270,16 @@ export default function Contact() {
                   value={formData.mobileNo}
                   onChange={handleChange}
                   className={inputClass}
+                  aria-invalid={Boolean(errors.mobileNo)}
+                  aria-describedby={
+                    errors.mobileNo ? "mobileNo-error" : undefined
+                  }
                 />
+
                 {errors.mobileNo && (
-                  <p className="mt-2 text-sm text-red-600">{errors.mobileNo}</p>
+                  <p id="mobileNo-error" className="mt-2 text-sm text-red-600">
+                    {errors.mobileNo}
+                  </p>
                 )}
               </div>
 
@@ -229,6 +287,7 @@ export default function Contact() {
                 <label htmlFor="email" className={labelClass}>
                   Email Address *
                 </label>
+
                 <input
                   id="email"
                   type="email"
@@ -237,9 +296,14 @@ export default function Contact() {
                   value={formData.email}
                   onChange={handleChange}
                   className={inputClass}
+                  aria-invalid={Boolean(errors.email)}
+                  aria-describedby={errors.email ? "email-error" : undefined}
                 />
+
                 {errors.email && (
-                  <p className="mt-2 text-sm text-red-600">{errors.email}</p>
+                  <p id="email-error" className="mt-2 text-sm text-red-600">
+                    {errors.email}
+                  </p>
                 )}
               </div>
 
@@ -247,6 +311,7 @@ export default function Contact() {
                 <label htmlFor="message" className={labelClass}>
                   Comment or Message *
                 </label>
+
                 <textarea
                   id="message"
                   name="message"
@@ -255,9 +320,68 @@ export default function Contact() {
                   value={formData.message}
                   onChange={handleChange}
                   className={`${inputClass} resize-y`}
+                  aria-invalid={Boolean(errors.message)}
+                  aria-describedby={
+                    errors.message ? "message-error" : undefined
+                  }
                 />
+
                 {errors.message && (
-                  <p className="mt-2 text-sm text-red-600">{errors.message}</p>
+                  <p id="message-error" className="mt-2 text-sm text-red-600">
+                    {errors.message}
+                  </p>
+                )}
+              </div>
+
+              {/* I'm not a robot CAPTCHA */}
+              <div>
+                <div
+                  className={`flex flex-col gap-4 rounded-xl border p-4 transition-colors flex-row sm:items-center sm:justify-start max-w-[280px] ${
+                    captchaError
+                      ? "border-red-300 bg-red-50"
+                      : "border-slate-200 bg-slate-50"
+                  }`}
+                >
+                  <label
+                    htmlFor="notRobot"
+                    className="flex cursor-pointer items-center gap-3"
+                  >
+                    <input
+                      id="notRobot"
+                      type="checkbox"
+                      checked={isCaptchaVerified}
+                      onChange={handleCaptchaChange}
+                      aria-invalid={Boolean(captchaError)}
+                      aria-describedby={
+                        captchaError ? "captcha-error" : undefined
+                      }
+                      className="h-5 w-5 shrink-0 cursor-pointer rounded border-slate-300 accent-[#2F3192] focus:ring-2 focus:ring-[#2F3192]/30"
+                    />
+
+                    <span className="text-[15px] font-medium text-slate-700">
+                      I'm not a robot
+                    </span>
+                  </label>
+
+                  <div className="flex items-center gap-3 self-start sm:self-auto">
+                    <Image
+                      src="/contact/captcha.png"
+                      alt="CAPTCHA verification image"
+                      width={150}
+                      height={56}
+                      className="h-14 w-auto max-w-[150px] rounded-md border border-slate-200 bg-white object-contain p-1"
+                    />
+                  </div>
+                </div>
+
+                {captchaError && (
+                  <p
+                    id="captcha-error"
+                    role="alert"
+                    className="mt-2 text-sm text-red-600"
+                  >
+                    {captchaError}
+                  </p>
                 )}
               </div>
 
@@ -265,7 +389,11 @@ export default function Contact() {
                 <div
                   role="status"
                   aria-live="polite"
-                  className={`rounded-xl border px-4 py-3 text-[15px] ${status === "success" ? "border-green-200 bg-green-50 text-green-700" : "border-red-200 bg-red-50 text-red-700"}`}
+                  className={`rounded-xl border px-4 py-3 text-[15px] ${
+                    status === "success"
+                      ? "border-green-200 bg-green-50 text-green-700"
+                      : "border-red-200 bg-red-50 text-red-700"
+                  }`}
                 >
                   {status}
                 </div>
@@ -277,6 +405,7 @@ export default function Contact() {
                 className="flex w-full items-center justify-center gap-2 rounded-xl bg-[#2F3192] px-5 py-4 text-[16px] font-medium text-white shadow-md shadow-[#2F3192]/15 transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#242675] hover:shadow-lg focus:outline-none focus:ring-4 focus:ring-[#2F3192]/20 disabled:cursor-not-allowed disabled:opacity-60"
               >
                 {isSubmitting ? "Submitting..." : "Submit Message"}
+
                 {!isSubmitting && <ArrowUpRight size={19} />}
               </button>
 
@@ -297,7 +426,9 @@ export default function Contact() {
                   <span className="text-sm font-medium tracking-wide text-white/75">
                     Contact Information
                   </span>
+
                   <h2 className="mt-1 text-2xl font-semibold">Let's Connect</h2>
+
                   <p className={`mt-2 text-white/80 ${textClass}`}>
                     Reach out to our team for product enquiries, business
                     discussions, and assistance.
@@ -312,6 +443,7 @@ export default function Contact() {
                   <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#2F3192]/[0.07] text-[#2F3192]">
                     <Phone size={20} />
                   </div>
+
                   <h3 className="text-lg font-semibold text-[#2F3192]">
                     Phone Number
                   </h3>
@@ -333,6 +465,7 @@ export default function Contact() {
                       className="group flex min-w-0 items-center justify-between gap-2 rounded-xl border border-slate-200 bg-slate-50 px-3 py-3 text-[14px] text-slate-600 transition-all duration-300 hover:border-[#2F3192]/30 hover:bg-[#2F3192]/5 hover:text-[#2F3192]"
                     >
                       <span className="min-w-0 break-words">{phone}</span>
+
                       <ArrowUpRight
                         size={15}
                         className="shrink-0 text-[#2F3192] opacity-0 transition-opacity group-hover:opacity-100"
@@ -347,6 +480,7 @@ export default function Contact() {
                   <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#2F3192]/[0.07] text-[#2F3192]">
                     <Mail size={20} />
                   </div>
+
                   <h3 className="text-lg font-semibold text-[#2F3192]">
                     Email Address
                   </h3>
@@ -362,6 +496,7 @@ export default function Contact() {
                     <span className="min-w-0 break-all">
                       sales@royalequipments.in
                     </span>
+
                     <ArrowUpRight
                       size={16}
                       className="shrink-0 text-[#2F3192]"
@@ -375,6 +510,7 @@ export default function Contact() {
                     <span className="min-w-0 break-all">
                       royalequipments@gmail.com
                     </span>
+
                     <ArrowUpRight
                       size={16}
                       className="shrink-0 text-[#2F3192]"
@@ -388,10 +524,12 @@ export default function Contact() {
                   <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#2F3192]/[0.07] text-[#2F3192]">
                     <MapPin size={20} />
                   </div>
+
                   <h3 className="text-lg font-semibold text-[#2F3192]">
                     Office Address
                   </h3>
                 </div>
+
                 <p className={`mt-3 pl-1 text-slate-600 ${textClass}`}>
                   Plot No. A1, Suraj Vihar, Opposite NSIT College, Near Dwarka
                   Mor Metro Station, New Delhi – 110078, India
@@ -403,10 +541,12 @@ export default function Contact() {
                   <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#2F3192]/[0.07] text-[#2F3192]">
                     <Factory size={20} />
                   </div>
+
                   <h3 className="text-lg font-semibold text-[#2F3192]">
                     Factory Address
                   </h3>
                 </div>
+
                 <p className={`mt-3 pl-1 text-slate-600 ${textClass}`}>
                   Khewat No. 979, Khatoni No. 1127 Khatri Industrial Area,
                   Khasra No. 170/5/1, Sampla Berl Road, Ismalla-11B, Rohtak,
@@ -417,12 +557,15 @@ export default function Contact() {
           </section>
         </div>
       </main>
+
       <section className="w-full overflow-hidden border-t border-slate-200 bg-slate-50">
         <div className="mx-auto w-full max-w-7xl px-4 pt-8 sm:px-6 lg:px-8">
           <h2 className="text-2xl font-semibold text-[#2F3192]">
             Find Our Office
           </h2>
+
           <div className="mt-3 h-1 w-12 rounded-full bg-[#2F3192]" />
+
           <p className={`mt-3 text-slate-600 ${textClass}`}>
             Explore our office location and nearby roads on the map below.
           </p>
