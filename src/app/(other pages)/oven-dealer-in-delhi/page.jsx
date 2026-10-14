@@ -8,7 +8,7 @@ export const metadata = {
   keywords: ["Pizza Oven Dealer in Delhi", "Combi Oven Dealer in Delhi"],
 
   alternates: {
-    canonical: " https://www.royalequipments.in/oven-dealer-in-delhi",
+    canonical: "https://www.royalequipments.in/oven-dealer-in-delhi/",
   },
 };
 

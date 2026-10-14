@@ -33,7 +33,7 @@ export default function HomeBanner() {
           <SwiperSlide key={slide} className="overflow-hidden">
             <div className="relative w-full aspect-[16/6] min-h-[220px] sm:min-h-[300px] lg:min-h-[600px]">
               <Image
-                src="/home/banner.jpg"
+                src="/home/banner.webp"
                 alt={`Commercial Kitchen Equipment Banner ${slide}`}
                 fill
                 priority={slide === 1}

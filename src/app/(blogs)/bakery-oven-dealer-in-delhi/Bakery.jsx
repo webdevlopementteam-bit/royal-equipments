@@ -84,7 +84,7 @@ export default function BakeryOvenGuide() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6 my-8">
           <div className="relative w-full h-64 sm:h-72 md:h-80 rounded-2xl border border-[#2F3192]/10 bg-white p-4 shadow-sm transition-all duration-300 hover:border-[#2F3192]/30 hover:shadow-lg">
             <Image
-              src="/blog/bakery-oven-dealer-in-delhi/p1.png"
+              src="/blog/bakery-oven-dealer-in-delhi/p1.webp"
               alt="Bakery Oven 1"
               fill
               sizes="(max-width: 768px) 100vw, 50vw"
@@ -94,7 +94,7 @@ export default function BakeryOvenGuide() {
 
           <div className="relative w-full h-64 sm:h-72 md:h-80 rounded-2xl border border-[#2F3192]/10 bg-white p-4 shadow-sm transition-all duration-300 hover:border-[#2F3192]/30 hover:shadow-lg">
             <Image
-              src="/blog/bakery-oven-dealer-in-delhi/p2.png"
+              src="/blog/bakery-oven-dealer-in-delhi/p2.webp"
               alt="Bakery Oven 2"
               fill
               sizes="(max-width: 768px) 100vw, 50vw"
@@ -298,7 +298,7 @@ export default function BakeryOvenGuide() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6 my-8">
           <div className="relative w-full h-64 sm:h-72 md:h-80 rounded-2xl border border-[#2F3192]/10 bg-white shadow-sm transition-all duration-300 hover:border-[#2F3192]/30 hover:shadow-lg">
             <Image
-              src="/blog/bakery-oven-dealer-in-delhi/p3.png"
+              src="/blog/bakery-oven-dealer-in-delhi/p3.webp"
               alt="Bakery Oven 3"
               fill
               sizes="(max-width: 768px) 100vw, 50vw"
@@ -308,7 +308,7 @@ export default function BakeryOvenGuide() {
 
           <div className="relative w-full h-64 sm:h-72 md:h-80 rounded-2xl border border-[#2F3192]/10 bg-white shadow-sm transition-all duration-300 hover:border-[#2F3192]/30 hover:shadow-lg">
             <Image
-              src="/blog/bakery-oven-dealer-in-delhi/p4.png"
+              src="/blog/bakery-oven-dealer-in-delhi/p4.webp"
               alt="Bakery Oven 4"
               fill
               sizes="(max-width: 768px) 100vw, 50vw"
@@ -572,7 +572,7 @@ export default function BakeryOvenGuide() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6 my-8">
           <div className="relative w-full h-64 sm:h-72 md:h-80 rounded-2xl border border-[#2F3192]/10 bg-white shadow-sm transition-all duration-300 hover:border-[#2F3192]/30 hover:shadow-lg">
             <Image
-              src="/blog/bakery-oven-dealer-in-delhi/p5.png"
+              src="/blog/bakery-oven-dealer-in-delhi/p5.webp"
               alt="Bakery Oven 5"
               fill
               sizes="(max-width: 768px) 100vw, 50vw"
@@ -582,7 +582,7 @@ export default function BakeryOvenGuide() {
 
           <div className="relative w-full h-64 sm:h-72 md:h-80 rounded-2xl border border-[#2F3192]/10 bg-white shadow-sm transition-all duration-300 hover:border-[#2F3192]/30 hover:shadow-lg">
             <Image
-              src="/blog/bakery-oven-dealer-in-delhi/p6.png"
+              src="/blog/bakery-oven-dealer-in-delhi/p6.webp"
               alt="Bakery Oven 6"
               fill
               sizes="(max-width: 768px) 100vw, 50vw"

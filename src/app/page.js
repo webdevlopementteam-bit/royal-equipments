@@ -5,6 +5,12 @@ import OurWorkSection from "@/sections/OurWorkSection";
 import WelcomeSection from "@/sections/WelcomeSection";
 import React from "react";
 
+export const metadata = {
+  alternates: {
+    canonical: "https://www.royalequipments.in/",
+  },
+};
+
 function Page() {
   return (
     <main className="relative min-h-screen overflow-hidden">
@@ -12,7 +18,7 @@ function Page() {
       <div
         className="fixed inset-0 -z-10 bg-cover bg-center bg-no-repeat blur-sm scale-105"
         style={{
-          backgroundImage: "url('/home/home-bg.png')",
+          backgroundImage: "url('/home/home-bg.webp')",
         }}
       />
 

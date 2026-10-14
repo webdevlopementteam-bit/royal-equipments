@@ -14,7 +14,7 @@ export default function ChineseBurnerSection() {
           <div className="lg:col-span-5 bg-white border border-gray-200 rounded-lg p-6 shadow-sm flex items-center justify-center">
             <div className="relative w-full h-[150px] md:h-[320px]">
               <Image
-                src="/blog/b7.jpg"
+                src="/blog/b7.webp"
                 alt="Chinese Burner"
                 fill
                 sizes="100vw"

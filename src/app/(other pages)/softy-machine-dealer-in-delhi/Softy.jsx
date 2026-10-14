@@ -15,7 +15,7 @@ export default function SoftyMachineSection() {
             <div className="bg-white border border-gray-200 rounded-t-lg p-6 shadow-sm flex items-center justify-center w-full">
               <div className="relative w-full h-[250px]">
                 <Image
-                  src="/blog/softy-machine.jpg"
+                  src="/blog/softy-machine.webp"
                   alt="Softy Machine"
                   fill
                   className="object-cover"

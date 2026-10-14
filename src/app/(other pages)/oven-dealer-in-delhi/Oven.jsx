@@ -14,7 +14,7 @@ export default function BakeryOvenSection() {
           <div className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm flex flex-col items-center justify-between">
             <div className="relative w-full h-[220px] mb-4">
               <Image
-                src="/blog/bakery-oven-dealer-in-delhi/p4.png"
+                src="/blog/bakery-oven-dealer-in-delhi/p4.webp"
                 alt="Two Deck Oven With Proffer"
                 fill
                 className="object-contain"
@@ -30,7 +30,7 @@ export default function BakeryOvenSection() {
           <div className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm flex flex-col items-center justify-between">
             <div className="relative w-full h-[220px] mb-4">
               <Image
-                src="/blog/bakery-oven-dealer-in-delhi/p1.png"
+                src="/blog/bakery-oven-dealer-in-delhi/p1.webp"
                 alt="Pizza Oven"
                 fill
                 className="object-contain"
@@ -46,7 +46,7 @@ export default function BakeryOvenSection() {
           <div className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm flex flex-col items-center justify-between">
             <div className="relative w-full h-[220px] mb-4">
               <Image
-                src="/blog/bakery-oven-dealer-in-delhi/p3.png"
+                src="/blog/bakery-oven-dealer-in-delhi/p3.webp"
                 alt="Conveyor Pizza Oven"
                 fill
                 className="object-contain"

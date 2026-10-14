@@ -192,7 +192,7 @@ export default function Navbar() {
             >
               <div className="relative w-30 h-15 sm:w-40 sm:h-14">
                 <Image
-                  src="/home/logo.png"
+                  src="/home/logo.webp"
                   alt="Royal Logo"
                   fill
                   priority

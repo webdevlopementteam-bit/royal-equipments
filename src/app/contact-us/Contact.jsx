@@ -365,7 +365,7 @@ export default function Contact() {
 
                   <div className="flex items-center gap-3 self-start sm:self-auto">
                     <Image
-                      src="/contact/captcha.png"
+                      src="/contact/captcha.webp"
                       alt="CAPTCHA verification image"
                       width={150}
                       height={56}

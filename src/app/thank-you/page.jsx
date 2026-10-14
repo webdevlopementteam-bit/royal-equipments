@@ -14,7 +14,7 @@ export default function ThankYouPage() {
       setIsAllowed(true);
       sessionStorage.removeItem("contactFormSubmitted");
     } else {
-      window.location.replace("/contact");
+      window.location.replace("/contact-us/");
     }
   }, []);
 

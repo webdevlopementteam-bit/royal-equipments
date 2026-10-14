@@ -65,7 +65,7 @@ export default function ThreeBurnerPage() {
           {/* Product Image Container */}
           <div className="border border-gray-200 rounded-lg p-6 flex justify-center items-center bg-white shadow-sm h-full min-h-[220px]">
             <Image
-              src="/products/cooking-equipments/Three Burner Range.jpg"
+              src="/products/cooking-equipments/Three Burner Range.webp"
               alt="Three Burner Range Commercial Stove"
               width={500}
               height={400}

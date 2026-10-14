@@ -3,7 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { ChevronRight, Home } from "lucide-react";
 
-export default function Breadcrumb({ title, bgimg = "/breadcrumb.jpg" }) {
+export default function Breadcrumb({ title, bgimg = "/breadcrumb.webp" }) {
   return (
     <section className="relative min-h-[220px] sm:min-h-[240px] md:min-h-[260px] lg:min-h-[380px] overflow-hidden bg-slate-950 text-white flex items-center border-0 selection:bg-[#2F3192] selection:text-white">
       {/* ================= BACKGROUND IMAGE ================= */}
@@ -49,9 +49,9 @@ export default function Breadcrumb({ title, bgimg = "/breadcrumb.jpg" }) {
           </div>
 
           {/* Page Title */}
-          <h1 className="text-3xl sm:text-4xl  lg:text-5xl font-extrabold tracking-tight leading-[1.05] text-white drop-shadow-2xl">
+          <h2 className="text-3xl sm:text-4xl  lg:text-5xl font-extrabold tracking-tight leading-[1.05] text-white drop-shadow-2xl">
             {title}
-          </h1>
+          </h2>
 
           {/* Accent Line */}
           <div className="mt-3 sm:mt-4 mb-4 sm:mb-5 flex items-center gap-1.5">

@@ -1,20 +1,22 @@
-import React from "react";
+import React, { Suspense } from "react";
 import Category from "./Category";
 
 export const metadata = {
-  title: "",
-  description: "",
-  keywords: ["", ""],
+  title: "Blog Category - Royal Equipments",
+  description:
+    "Browse Royal Equipments blog articles by category – guides on commercial kitchen, bakery, refrigeration and restaurant equipment in Delhi.",
 
   alternates: {
-    canonical: "",
+    canonical: "https://www.royalequipments.in/blog/",
   },
 };
 
 function page() {
   return (
     <>
-      <Category />
+      <Suspense fallback={null}>
+        <Category />
+      </Suspense>
     </>
   );
 }

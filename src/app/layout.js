@@ -15,6 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
+  metadataBase: new URL("https://www.royalequipments.in"),
   title: "Best Commercial Kitchen Equipment Manufacturers in Delhi",
   description:
     "Royal Equipments – Leading Commercial Kitchen Equipment Manufacturers in Delhi. We offer durable, high-performance kitchen solutions for hotels, restaurants & bakeries. Get a free quote today!",
@@ -24,11 +25,7 @@ export const metadata = {
     "Royal Equipments",
   ],
   icons: {
-    icon: "/logo.png",
-  },
-
-  alternates: {
-    canonical: "https://www.royalequipments.in/",
+    icon: "/logo.webp",
   },
 };
 

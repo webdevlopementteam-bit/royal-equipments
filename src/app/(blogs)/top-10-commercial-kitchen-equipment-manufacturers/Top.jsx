@@ -83,7 +83,7 @@ export default function Top() {
         {/* Featured Image */}
         <div className="group relative mb-14 h-[250px] w-full overflow-hidden rounded-2xl border border-[#2F3191]/10 bg-slate-50 shadow-lg sm:h-[380px] md:h-[500px]">
           <Image
-            src="/blog/b3.png"
+            src="/blog/b3.webp"
             alt="Commercial Kitchen Equipment"
             fill
             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 90vw, 1024px"

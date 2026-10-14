@@ -74,7 +74,7 @@ export default function WelcomeSection() {
           >
             <div className="relative w-full aspect-[4/3] sm:aspect-[16/11] lg:aspect-[4/3] min-h-[300px] sm:min-h-[380px] lg:min-h-[420px] rounded-3xl overflow-hidden shadow-2xl border border-slate-100 group">
               <Image
-                src="/home/royal.png"
+                src="/home/royal.webp"
                 alt="Commercial Kitchen Setup by Royal Equipment"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"

@@ -73,11 +73,11 @@ export default function SweetDisplayCounterBlog() {
             manufacturer.
           </p>
         </div>
-        {/* Image Set 1 (p1.png & p2.png) */}
+        {/* Image Set 1 (p1.webp & p2.webp) */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8 items-center">
           <div className="relative w-full h-64 md:h-60">
             <Image
-              src="/blog/sweet-display-counter-manufacturer-in-delhi/p1.png"
+              src="/blog/sweet-display-counter-manufacturer-in-delhi/p1.webp"
               alt="Sweet Display Counter 1"
               fill
               className="object-contain"
@@ -85,7 +85,7 @@ export default function SweetDisplayCounterBlog() {
           </div>
           <div className="relative w-full h-64 md:h-60">
             <Image
-              src="/blog/sweet-display-counter-manufacturer-in-delhi/p2.png"
+              src="/blog/sweet-display-counter-manufacturer-in-delhi/p2.webp"
               alt="Sweet Display Counter 2"
               fill
               className="object-contain"
@@ -469,11 +469,11 @@ export default function SweetDisplayCounterBlog() {
           over imported brands — better pricing, faster service, and full
           customisation.
         </p>
-        {/* Image Set 2 (p3.png & p4.png) */}
+        {/* Image Set 2 (p3.webp & p4.webp) */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8 items-center">
           <div className="relative w-full h-64 md:h-80">
             <Image
-              src="/blog/sweet-display-counter-manufacturer-in-delhi/p3.png"
+              src="/blog/sweet-display-counter-manufacturer-in-delhi/p3.webp"
               alt="Display Counter Model 3"
               fill
               className="object-contain"
@@ -481,7 +481,7 @@ export default function SweetDisplayCounterBlog() {
           </div>
           <div className="relative w-full h-64 md:h-80">
             <Image
-              src="/blog/sweet-display-counter-manufacturer-in-delhi/p4.png"
+              src="/blog/sweet-display-counter-manufacturer-in-delhi/p4.webp"
               alt="Display Counter Model 4"
               fill
               className="object-contain"
@@ -622,11 +622,11 @@ export default function SweetDisplayCounterBlog() {
           Any business that sells food which needs to look fresh and stay fresh
           benefits from a proper display counter.
         </p>
-        {/* Image Set 3 (p5.png & p6.png) */}
+        {/* Image Set 3 (p5.webp & p6.webp) */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8 items-center">
           <div className="relative w-full h-64 md:h-80">
             <Image
-              src="/blog/sweet-display-counter-manufacturer-in-delhi/p5.png"
+              src="/blog/sweet-display-counter-manufacturer-in-delhi/p5.webp"
               alt="Display Counter Model 5"
               fill
               className="object-contain"
@@ -634,7 +634,7 @@ export default function SweetDisplayCounterBlog() {
           </div>
           <div className="relative w-full h-64 md:h-80">
             <Image
-              src="/blog/sweet-display-counter-manufacturer-in-delhi/p6.png"
+              src="/blog/sweet-display-counter-manufacturer-in-delhi/p6.webp"
               alt="Display Counter Model 6"
               fill
               className="object-contain"

@@ -5,7 +5,7 @@
             {/* Mobile + First Desktop Image */}
             <div className="relative h-full w-full shrink-0 lg:w-1/2">
               <Image
-                src="/products/product/top.png"
+                src="/products/product/top.webp"
                 alt=""
                 fill
                 priority
@@ -17,7 +17,7 @@
             {/* Second Image - Desktop */}
             <div className="relative hidden h-full w-1/2 shrink-0 lg:block">
               <Image
-                src="/products/product/top.png"
+                src="/products/product/top.webp"
                 alt=""
                 fill
                 sizes="50vw"

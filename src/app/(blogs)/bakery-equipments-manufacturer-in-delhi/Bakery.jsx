@@ -81,7 +81,7 @@ export default function BakeryEquipmentBlog() {
         <div className="my-10 grid grid-cols-1 gap-5 sm:grid-cols-2">
           <div className="group overflow-hidden rounded-2xl border border-[#2F3192]/10 bg-white p-2 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
             <Image
-              src="/blog/bakery-equipments-manufacturer-in-delhi/p1.png"
+              src="/blog/bakery-equipments-manufacturer-in-delhi/p1.webp"
               alt="Bakery Equipment Ovens"
               width={700}
               height={400}
@@ -92,7 +92,7 @@ export default function BakeryEquipmentBlog() {
 
           <div className="group overflow-hidden rounded-2xl border border-[#2F3192]/10 bg-white p-2 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
             <Image
-              src="/blog/bakery-equipments-manufacturer-in-delhi/p2.png"
+              src="/blog/bakery-equipments-manufacturer-in-delhi/p2.webp"
               alt="Bakery Equipment Ovens"
               width={700}
               height={400}
@@ -292,7 +292,7 @@ export default function BakeryEquipmentBlog() {
         <div className="my-10 grid grid-cols-1 gap-5 sm:grid-cols-2">
           <div className="overflow-hidden rounded-2xl border border-[#2F3192]/10 bg-white p-2 shadow-sm">
             <Image
-              src="/blog/bakery-equipments-manufacturer-in-delhi/p3.png"
+              src="/blog/bakery-equipments-manufacturer-in-delhi/p3.webp"
               alt="Bakery Machinery Display"
               width={700}
               height={400}
@@ -303,7 +303,7 @@ export default function BakeryEquipmentBlog() {
 
           <div className="overflow-hidden rounded-2xl border border-[#2F3192]/10 bg-white p-2 shadow-sm">
             <Image
-              src="/blog/bakery-equipments-manufacturer-in-delhi/p4.png"
+              src="/blog/bakery-equipments-manufacturer-in-delhi/p4.webp"
               alt="Bakery Machinery Display"
               width={700}
               height={400}
@@ -566,7 +566,7 @@ export default function BakeryEquipmentBlog() {
         <div className="my-10 grid grid-cols-1 gap-5 sm:grid-cols-2">
           <div className="overflow-hidden rounded-2xl border border-[#2F3192]/10 bg-white p-2 shadow-sm">
             <Image
-              src="/blog/bakery-equipments-manufacturer-in-delhi/p5.png"
+              src="/blog/bakery-equipments-manufacturer-in-delhi/p5.webp"
               alt="Royal Equipments Commercial Ovens"
               width={700}
               height={400}

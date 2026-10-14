@@ -8,22 +8,22 @@ import { ArrowRight } from "lucide-react";
 const workCategories = [
   {
     title: "Bakery Equipments",
-    image: "/home/our-work/b1.jpg",
+    image: "/home/our-work/b1.webp",
     href: "/our-products/bakery-equipments-manufacturer",
   },
   {
     title: "Chapati Equipments",
-    image: "/home/our-work/b2.jpg",
+    image: "/home/our-work/b2.webp",
     href: "/our-products/chapati-equipments",
   },
   {
     title: "Cooking Equipments",
-    image: "/home/our-work/b3.jpg",
+    image: "/home/our-work/b3.webp",
     href: "/our-products/cooking-equipments",
   },
   {
     title: "Refrigeration",
-    image: "/home/our-work/b4.jpg",
+    image: "/home/our-work/b4.webp",
     href: "/our-products/refrigeration",
   },
 ];

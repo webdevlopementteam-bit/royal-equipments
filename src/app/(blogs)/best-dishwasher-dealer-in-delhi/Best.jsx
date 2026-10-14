@@ -81,7 +81,7 @@ export default function BlogPost() {
           {/* Banner Image Section */}
           <div className="my-8 sm:my-10 rounded-2xl overflow-hidden border border-[#2F3191]/15 shadow-lg shadow-[#2F3191]/10">
             <Image
-              src="/blog/b1.png"
+              src="/blog/b1.webp"
               alt="Dishwasher Dealer in Delhi - Royal Equipments"
               width={1200}
               height={600}

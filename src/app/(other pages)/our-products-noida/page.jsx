@@ -8,7 +8,7 @@ export const metadata = {
   keywords: ["Hotel Kitchen Equipments Manufacturer & supplier in noida"],
 
   alternates: {
-    canonical: " https://www.royalequipments.in/our-products-noida/",
+    canonical: "https://www.royalequipments.in/our-products-noida/",
   },
 };
 

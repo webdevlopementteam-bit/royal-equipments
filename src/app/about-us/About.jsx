@@ -145,7 +145,7 @@ export default function App() {
                   <div className="absolute bottom-0 right-0 w-20 h-20 border-b-4 border-r-4 border-[#2E3393] rounded-br-2xl z-10 pointer-events-none" />
 
                   <Image
-                    src="/about/p1.png"
+                    src="/about/p1.webp"
                     alt="Commercial Kitchen Equipment Setup"
                     width={1200}
                     height={900}
@@ -460,8 +460,8 @@ export default function App() {
               <div className="lg:col-span-6 bg-[#f5f6fa] p-6 sm:p-10 flex items-center justify-center">
                 <div className="relative w-full rounded-2xl overflow-hidden border border-slate-200 bg-white p-4 shadow-xl">
                   <Image
-                    src="/about/p2.png"
-                    alt="MSME Certificate /about/p2.jpg"
+                    src="/about/p2.webp"
+                    alt="MSME Certificate /about/p2.webp"
                     width={1200}
                     height={900}
                     sizes="(max-width: 1024px) 100vw, 50vw"
@@ -486,8 +486,8 @@ export default function App() {
               <div className="lg:col-span-6 order-2 lg:order-1 bg-[#f5f6fa] p-6 sm:p-10 flex items-center justify-center">
                 <div className="relative w-full rounded-2xl overflow-hidden border border-slate-200 bg-white p-4 shadow-xl">
                   <Image
-                    src="/about/p3.jpg"
-                    alt="ISO Certification /about/p3.jpg"
+                    src="/about/p3.webp"
+                    alt="ISO Certification /about/p3.webp"
                     width={1200}
                     height={900}
                     sizes="(max-width: 1024px) 100vw, 50vw"
@@ -591,8 +591,8 @@ export default function App() {
                 >
                   <div className="relative h-[260px] sm:h-[320px] lg:h-[380px] overflow-hidden rounded-[20px] bg-[#f8f9fc]">
                     <Image
-                      src="/about/p5.jpg"
-                      alt="Company Album p5.jpg"
+                      src="/about/p5.webp"
+                      alt="Company Album p5.webp"
                       fill
                       sizes="(max-width: 768px) 100vw, 50vw"
                       className="object-contain transition-transform duration-500 group-hover:scale-[1.03]"
@@ -610,8 +610,8 @@ export default function App() {
                 >
                   <div className="relative h-[260px] sm:h-[320px] lg:h-[380px] overflow-hidden rounded-[20px] bg-[#f8f9fc]">
                     <Image
-                      src="/about/p4.jpg"
-                      alt="Company Album p4.jpg"
+                      src="/about/p4.webp"
+                      alt="Company Album p4.webp"
                       fill
                       sizes="(max-width: 768px) 100vw, 50vw"
                       className="object-contain transition-transform duration-500 group-hover:scale-[1.03]"

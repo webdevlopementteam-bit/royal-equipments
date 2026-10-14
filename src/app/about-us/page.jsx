@@ -12,7 +12,7 @@ export const metadata = {
   ],
 
   alternates: {
-    canonical: "https://www.royalequipments.in/about-us",
+    canonical: "https://www.royalequipments.in/about-us/",
   },
 };
 
