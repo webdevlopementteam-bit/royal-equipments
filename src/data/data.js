@@ -589,15 +589,7 @@ export const blogPosts = [
     bottomTag: "ROYAL EQUIPMENTS / MAY 18, 2026",
     slug: "/bakery-equipments-manufacturer-in-delhi",
   },
-  {
-    category: "BLOG",
-    title: "Best Sweet Display Counter Manufacturer for Mithai & Bakery Stores",
-    image: "/blog/b5.webp",
-    description:
-      "A sweet display counter can quietly decide whether a customer buys two boxes of mithai or walks out empty-handed. The way sweets are arranged, lit, and kept fresh has a direct effect on daily sales. Yet most shop owners spend...",
-    bottomTag: "ROYAL EQUIPMENTS / MAY 16, 2026",
-    slug: "/sweet-display-counter-manufacturer-in-delhi",
-  },
+
   {
     category: "BLOG",
     title: "Best Bakery Oven Dealer in Delhi: The Complete 2026 Buyer's Guide",

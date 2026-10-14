@@ -17,7 +17,7 @@ export default function Stainless() {
         {/* SS Work Table Section (content matches provided transcription) */}
         <section className="bg-gray-50 py-10 px-6 mt-10">
           <div className="max-w-5xl mx-auto">
-            <motion.h2
+            <motion.h1
               initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -25,7 +25,7 @@ export default function Stainless() {
               className="text-3xl font-bold text-gray-800 mb-4"
             >
               SS Work Table Manufacturer in Delhi
-            </motion.h2>
+            </motion.h1>
 
             <motion.p
               initial={{ opacity: 0 }}

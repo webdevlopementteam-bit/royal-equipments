@@ -59,9 +59,9 @@ function ProductBreadcrumb({ currentProduct }) {
             <span className="w-6 sm:w-8 h-[2px] bg-white" />
           </div>
 
-          <h1 className="text-3xl sm:text-4xl md:text-4xl  font-extrabold tracking-tight leading-[1.05] text-white drop-shadow-2xl">
+          <h2 className="text-3xl sm:text-4xl md:text-4xl  font-extrabold tracking-tight leading-[1.05] text-white drop-shadow-2xl">
             {currentProduct ? currentProduct : "Our Products"}
-          </h1>
+          </h2>
 
           <div className="mt-3 sm:mt-4 mb-4 sm:mb-5 flex items-center gap-1.5">
             <span className="w-10 sm:w-14 h-1 rounded-full bg-white" />

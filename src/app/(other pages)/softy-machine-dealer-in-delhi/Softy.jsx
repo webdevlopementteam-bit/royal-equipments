@@ -44,7 +44,7 @@ export default function SoftyMachineSection() {
               ice cream very quickly. That is why many people who own businesses
               look for a{" "}
               <Link
-                href="https://www.royalequipments.in/contact-us/"
+                href="/contact-us/"
                 className=" font-bold text-blue-600 hover:text-blue-900"
               >
                 Softy Machine Dealer in Delhi
@@ -72,10 +72,10 @@ export default function SoftyMachineSection() {
         <p className="text-[17px] md:text-[19px] text-gray-700 leading-relaxed">
           Companies like{" "}
           <Link
-            href="https://www.royalequipments.in/"
+            href="/"
             className=" font-bold text-blue-600 hover:text-blue-900"
           >
-            Royal Equipments {' '}
+            Royal Equipments{" "}
           </Link>
           sell machines that make food, including softy machines that cafes and
           restaurants and ice cream shops use. If you choose the machine you can
@@ -161,7 +161,7 @@ export default function SoftyMachineSection() {
         <p className="text-[17px] md:text-[19px] text-gray-700 leading-relaxed">
           That’s why many ice cream shop owners choose to buy equipment from a{" "}
           <Link
-            href="https://www.royalequipments.in/contact-us/"
+            href="/contact-us/"
             className=" font-bold text-blue-600 hover:text-blue-900"
           >
             Softy Machine Dealer in Delhi
@@ -232,10 +232,15 @@ export default function SoftyMachineSection() {
         </h2>
 
         <p className="text-[17px] md:text-[19px] text-gray-700 leading-relaxed">
-          <strong className="text-gray-900">Royal Equipments</strong> provides
-          commercial machines used in cafes, ice cream shops and restaurants.
-          These machines help make ice cream production efficient and business
-          operations smooth.
+          <Link
+            href="/our-product/"
+            className=" font-bold text-blue-600 hover:text-blue-900"
+          >
+            Royal Equipments
+          </Link>{" "}
+          provides commercial machines used in cafes, ice cream shops and
+          restaurants. These machines help make ice cream production efficient
+          and business operations smooth.
         </p>
 
         <p className="text-[17px] md:text-[19px] text-gray-700 leading-relaxed">
@@ -252,9 +257,12 @@ export default function SoftyMachineSection() {
         <p className="text-[17px] md:text-[19px] text-gray-700 leading-relaxed">
           Softy machines are now a part of ice cream businesses. They let shops
           serve creamy soft serve ice cream quickly. Choosing the{" "}
-          <strong className="text-gray-900">
-            Softy Machine Dealer in Delhi
-          </strong>{" "}
+          <Link
+            href="/contact-us/"
+            className=" font-bold text-blue-600 hover:text-blue-900"
+          >
+            Softy Machine Dealer in Delhi{" "}
+          </Link>{" "}
           ensures that businesses get reliable equipment from Royal Equipments
           that supports daily operations and makes customers happy with Softy
           machines, from Royal Equipments.

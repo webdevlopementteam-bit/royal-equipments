@@ -97,21 +97,17 @@ export default function ThreeBurnerPage() {
           </h2>
 
           <p className="text-[17px] md:text-[19px]">
-            A{" "}
+            A <strong>three burner stove</strong> is one of the most essential
+            pieces of equipment used in commercial kitchens. Restaurants,
+            hotels, dhabas, and catering businesses require powerful cooking
+            equipment that can handle heavy workloads and cook multiple dishes
+            at the same time. If you are searching for a reliable{" "}
             <Link
-              href={"https://www.royalequipments.in/contact-us/"}
+              href={"/contact-us/"}
               className="text-blue-600 hover:text=blue-900 font-bold"
             >
-              three burner stove
-            </Link>{" "}
-            is one of the most essential pieces of equipment used in commercial
-            kitchens. Restaurants, hotels, dhabas, and catering businesses
-            require powerful cooking equipment that can handle heavy workloads
-            and cook multiple dishes at the same time. If you are searching for
-            a reliable{" "}
-            <strong className="text-gray-900">
               Three Burner Manufacturer in Delhi
-            </strong>
+            </Link>
             ,{" "}
             <span className="font-semibold text-gray-900">
               Royal Equipments
@@ -195,10 +191,13 @@ export default function ThreeBurnerPage() {
             Choosing the right kitchen equipment plays a major role in the
             success of any food business. With the durable and efficient burners
             offered by{" "}
-            <strong className="text-gray-900 font-semibold">
-              Royal Equipments
-            </strong>
-            , businesses can improve cooking speed, maintain consistent food
+            <Link
+              href={"/"}
+              className="text-blue-600 hover:text=blue-900 font-bold"
+            >
+              Royal Equipments{" "}
+            </Link>
+            businesses can improve cooking speed, maintain consistent food
             quality, and ensure long-term reliability in their kitchen
             operations.
           </p>

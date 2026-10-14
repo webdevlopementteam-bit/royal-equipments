@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import { useState } from "react";
 import {
   CheckCircle2,
   Building2,
@@ -12,9 +13,63 @@ import {
 } from "lucide-react";
 import Breadcrumb from "@/components/Breadcrumb";
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 
 export default function App() {
+  const faqData = [
+    {
+      id: 1,
+      question:
+        "Who is the best hotel kitchen equipment manufacturer in Delhi?",
+      answer:
+        "Royal Equipments is one of the leading hotel kitchen equipment manufacturers in Delhi, operating since 2001. Based in Dwarka Mor, New Delhi, the company runs a 15,000 sq. ft. manufacturing facility and supplies custom-built cooking, bakery, refrigeration, dishwashing and exhaust equipment to hotels, restaurants and commercial kitchens across India.",
+    },
+    {
+      id: 2,
+      question:
+        "What types of hotel kitchen equipment does Royal Equipments manufacture?",
+      answer:
+        "Royal Equipments manufactures cooking ranges, bakery equipment, chapati machines, food preparation equipment, refrigeration systems, bar equipment, display counters, stainless steel tables, storage racks, trolleys, dishwashing machines, and exhaust and gas pipeline systems. This makes it a single source for complete hotel and commercial kitchen setups.",
+    },
+    {
+      id: 3,
+      question: "Can hotel kitchen equipment be customized to fit my kitchen?",
+      answer:
+        "Yes. Royal Equipments fabricates hotel kitchen equipment to client-specific requirements, so dimensions, layouts and configurations are tailored to your kitchen space, menu and daily workload. All products are made from premium stainless steel sheets by an in-house team of designers and engineers.",
+    },
+    {
+      id: 4,
+      question:
+        "Does Royal Equipments supply hotel kitchen equipment outside Delhi?",
+      answer:
+        "Yes. Royal Equipments supplies hotel kitchen equipment across Delhi NCR and other states in India through its distribution network. Orders are shipped by road for timely delivery to hotels, restaurants, cafés, bakeries and institutional kitchens.",
+    },
+    {
+      id: 5,
+      question: "How do I get a quote from Royal Equipments?",
+      answer:
+        "To get a quote, contact Royal Equipments through the Contact Us page or visit its office at Plot No. A1, Suraj Vihar, near Dwarka Mor Metro Station, New Delhi – 110078.",
+    },
+  ];
+  const [openIndex, setOpenIndex] = useState(0); // First FAQ open by default
+
+  const toggleFAQ = (index) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
+
+  // Structured Data (JSON-LD) for Google SEO
+  const jsonLdData = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqData.map((item) => ({
+      "@type": "Question",
+      name: item.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: item.answer,
+      },
+    })),
+  };
   return (
     <>
       <Breadcrumb title={"about us"} />
@@ -623,6 +678,80 @@ export default function App() {
           </section>
         </main>
       </div>
+      <section className="bg-slate-50 py-16 px-4 sm:px-6 lg:px-8">
+        {/* Google SEO Schema */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdData) }}
+        />
+
+        <div className="max-w-4xl mx-auto">
+          {/* Header Section */}
+          <div className="text-center mb-12">
+            <span className="inline-flex items-center gap-2 text-xs sm:text-sm uppercase tracking-wider font-semibold text-[#2F3191] bg-[#2F3191]/10 border border-[#2F3191]/20 py-1.5 px-4 rounded-full mb-3 shadow-xs transition-all hover:bg-[#2F3191]/15">
+              <span className="w-2 h-2 rounded-full bg-[#2F3191] animate-pulse"></span>
+              Got Questions?
+            </span>
+            <h2 className="text-2xl sm:text-4xl font-bold text-slate-900 tracking-tight">
+              Start Your Hotel Kitchen Setup with Royal Equipments
+            </h2>
+          </div>
+
+          {/* FAQ Accordion List */}
+          <div className="space-y-4">
+            {faqData.map((faq, index) => {
+              const isOpen = openIndex === index;
+              return (
+                <div
+                  key={faq.id}
+                  className="bg-white rounded-xl border border-slate-200/80 shadow-sm overflow-hidden transition-all duration-200 hover:border-slate-300"
+                >
+                  <button
+                    type="button"
+                    onClick={() => toggleFAQ(index)}
+                    className="w-full flex items-center justify-between text-left p-5 sm:p-6 text-slate-900 font-semibold text-base sm:text-lg focus:outline-none"
+                    aria-expanded={isOpen}
+                  >
+                    <span className="pr-4 leading-snug">{faq.question}</span>
+                    <span className="flex-shrink-0 flex items-center justify-center w-8 h-8 rounded-full bg-slate-100 text-slate-600 transition-transform duration-300">
+                      <svg
+                        className={`w-5 h-5 transition-transform duration-300 ${
+                          isOpen ? "rotate-180 text-amber-600" : ""
+                        }`}
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                        strokeWidth={2}
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          d="M19 9l-7 7-7-7"
+                        />
+                      </svg>
+                    </span>
+                  </button>
+
+                  <AnimatePresence initial={false}>
+                    {isOpen && (
+                      <motion.div
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{ height: "auto", opacity: 1 }}
+                        exit={{ height: 0, opacity: 0 }}
+                        transition={{ duration: 0.25, ease: "easeInOut" }}
+                      >
+                        <div className="px-5 pb-6 sm:px-6 sm:pb-6 text-slate-600 text-sm sm:text-base leading-relaxed border-t border-slate-100 pt-4">
+                          {faq.answer}
+                        </div>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
     </>
   );
 }

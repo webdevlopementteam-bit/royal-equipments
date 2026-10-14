@@ -135,9 +135,9 @@ export default function RoyalEquipmentsProducts() {
             transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
             className="space-y-4"
           >
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight">
               Canteen Equipment Manufacturers – Royal Equipments
-            </h2>
+            </h1>
             <p className="text-slate-700 leading-relaxed text-base sm:text-lg">
               A well-equipped canteen is the backbone of any school, office,
               hospital, or factory. When hundreds of people depend on your
@@ -148,9 +148,12 @@ export default function RoyalEquipmentsProducts() {
                 Royal Equipments
               </strong>{" "}
               — one of the most reliable{" "}
-              <span className="text-[#2F3192] font-semibold">
+              <Link
+                href={"/contact-us"}
+                className="text-[#2F3192] hover:text-blue-600 font-semibold"
+              >
                 Canteen Equipment Manufacturers
-              </span>{" "}
+              </Link>{" "}
               in the region.
             </p>
             <p className="text-slate-700 leading-relaxed text-base sm:text-lg">

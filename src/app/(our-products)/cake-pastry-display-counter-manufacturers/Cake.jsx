@@ -39,7 +39,7 @@ export default function Cake() {
             name among{" "}
             <Link
               href="/contact-us"
-              className="text-blue-600 font-medium no-underline "
+              className="text-blue-600 font-bold no-underline "
             >
               Cake Pastry Display Counter Manufacturers
             </Link>{" "}
@@ -155,7 +155,7 @@ export default function Cake() {
           </motion.h2>
           <motion.p {...fadeIn} className="mb-6">
             We understand that no two bakeries are alike. As dedicated{" "}
-            <Link href="/contact-us" className="text-blue-600 font-medium ">
+            <Link href="/contact-us" className="text-blue-600 font-bold ">
               Cake Pastry Display Counter Manufacturers in Delhi
             </Link>
             , Royal Equipments offers a fully customized manufacturing process.
@@ -193,7 +193,7 @@ export default function Cake() {
             Serving Bakeries and Food Businesses Across Delhi
           </motion.h2>
           <motion.p {...fadeIn} className="mb-6">
-            <Link href="/" className="text-blue-600 font-medium ">
+            <Link href="/" className="text-blue-600 font-bold ">
               Royal Equipments
             </Link>{" "}
             has successfully supplied cake pastry display counters to hundreds
@@ -272,7 +272,7 @@ export default function Cake() {
                 You can reach out to us through our website at{" "}
                 <Link
                   href="https://www.royalequipments.in/"
-                  className="text-blue-600 font-medium "
+                  className="text-blue-600 font-bold "
                 >
                   www.royalequipments.in
                 </Link>{" "}
@@ -291,12 +291,10 @@ export default function Cake() {
           </motion.h2>
           <motion.p {...fadeIn} className="mb-6">
             Ready to upgrade your bakery or café display? Get in touch with{" "}
-            <Link href="/" className="text-blue-600 font-medium ">
-              Royal Equipments
-            </Link>{" "}
-            today for a free consultation and customized quote. As one of the
-            most trusted Cake Pastry Display Counter Manufacturers in Delhi, we
-            are here to help your business look its best and sell more.
+            <strong>Royal Equipments</strong> today for a free consultation and
+            customized quote. As one of the most trusted Cake Pastry Display
+            Counter Manufacturers in Delhi, we are here to help your business
+            look its best and sell more.
           </motion.p>
         </motion.div>
       </div>
