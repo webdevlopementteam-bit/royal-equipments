@@ -120,7 +120,7 @@ export default function Contact() {
           Accept: "application/json",
         },
         body: JSON.stringify({
-          access_key: "12345",
+          access_key: "cd6b83f4-f856-40a3-b93c-d03f04e0d5e0",
           subject: "New Contact Form Submission - Royale Equipments",
           from_name: "Royale Equipments Website",
           firstName: result.data.firstName,
