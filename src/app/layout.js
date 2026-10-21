@@ -27,6 +27,9 @@ export const metadata = {
   icons: {
     icon: "/logo.webp",
   },
+  verification: {
+    google: "3WI0IYnMjUZCfqOc8YdwmgrPAnAYLSzVAX6-tTO9bes",
+  },
 };
 
 export default function RootLayout({ children }) {
