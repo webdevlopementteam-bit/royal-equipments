@@ -5,7 +5,10 @@ export const metadata = {
   title: "Top 10 Commercial Kitchen Equipment Manufacturers in India 2026",
   description:
     "Explore India's top 10 commercial kitchen equipment manufacturers in 2026. Featuring Royal Equipments & other best brands for hotels, restaurants & catering businesses.",
-  keywords: ["", ""],
+  keywords: [
+    "Commercial Kitchen Equipment Manufacturer",
+    "Commercial Kitchen Equipment Manufacturers In Delhi",
+  ],
 
   alternates: {
     canonical:

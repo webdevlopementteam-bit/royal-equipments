@@ -5,7 +5,10 @@ export const metadata = {
   title: "Hotel Kitchen Equipment Manufacturer in Delhi | Royal Equipments",
   description:
     "Royal Equipments is a leading hotel kitchen equipment manufacturer in Delhi offering custom commercial kitchen setup, SS equipment & installation support.",
-  keywords: ["", ""],
+  keywords: [
+    "Hotel Kitchen Equipment Manufacturers",
+    "Hotel Kitchen Equipment Manufacturer In Delhi",
+  ],
 
   alternates: {
     canonical:

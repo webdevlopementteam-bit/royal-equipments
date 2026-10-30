@@ -44,7 +44,6 @@ const blogPages = [
   "hotel-kitchen-equipment-manufacturer-delhi",
   "top-10-commercial-kitchen-equipment-manufacturers",
   "bakery-equipments-manufacturer-in-delhi",
-  "sweet-display-counter-manufacturer-in-delhi",
   "bakery-oven-dealer-in-delhi",
   "chinese-burner-manufacturer-in-delhi",
 ];

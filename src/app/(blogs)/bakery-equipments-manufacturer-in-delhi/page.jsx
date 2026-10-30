@@ -6,7 +6,10 @@ export const metadata = {
     "Buy Bakery Equipments Manufacturer in Delhi Since 2001 | Royal Equipments",
   description:
     "Searching for a trusted bakery equipments manufacturer in Delhi? Learn how to choose the right baking machines, compare key features, and make smarter buying decisions in 2026.",
-  keywords: ["", ""],
+  keywords: [
+    "Bakery Equipment Manufacturers",
+    "Bakery Equipment Manufacturer In Delhi",
+  ],
 
   alternates: {
     canonical:

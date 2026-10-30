@@ -6,9 +6,51 @@ import { stainlessSteelTables } from "@/data/data";
 import { motion } from "framer-motion";
 import Link from "next/link";
 
+const faqs = [
+  {
+    q: "Which is the best SS work table manufacturer in Delhi?",
+    a: "Royal Equipments is a trusted SS work table manufacturer in Delhi, known for durable, hygienic, and corrosion-resistant stainless steel work tables. They supply plain, undershelf, drawer-type, heavy-duty, and fully customized tables for commercial kitchens, hospitals, food processing units, and industrial workshops.",
+  },
+  {
+    q: "What grade of stainless steel is best for a commercial kitchen work table?",
+    a: "SS 304 is the most commonly preferred grade for commercial kitchen work tables because it offers excellent corrosion resistance, food safety, and easy cleaning. SS 202 is a more budget-friendly option for dry or light-duty use. Royal Equipments helps you choose the right grade based on your usage and budget.",
+  },
+  {
+    q: "Can I get a customized SS work table made in Delhi?",
+    a: "Yes. Royal Equipments manufactures customized stainless steel work tables in Delhi based on your required size, height, load capacity, number of shelves, drawers, and application. Their team studies your workspace and daily operations to recommend a design that improves workflow and space utilization.",
+  },
+  {
+    q: "Why are stainless steel work tables preferred in hospitals and food processing units?",
+    a: "Stainless steel work tables are preferred because they are non-porous, rust-resistant, and easy to sanitize, which helps prevent bacteria and dirt buildup. Smooth welded joints and polished surfaces make them ideal for environments with strict hygiene standards, such as hospitals, laboratories, bakeries, and food processing units.",
+  },
+  {
+    q: "What types of SS work tables are available for commercial use?",
+    a: "Common types include plain SS work tables, tables with an undershelf, tables with drawers, heavy-duty tables for industrial loads, and customized designs. Royal Equipments offers all these options in various sizes, sheet thicknesses, and finishes to suit restaurants, hotels, catering services, and factories.",
+  },
+];
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((faq) => ({
+    "@type": "Question",
+    name: faq.q,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: faq.a,
+    },
+  })),
+};
+
 export default function Stainless() {
   return (
     <>
+      {/* Google SEO Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+
       <div className="bg-white pb-4 md:pb-8">
         <ProductBreadcrumb currentProduct={"Stainless Steel (SS) Work Table"} />
 
@@ -306,6 +348,39 @@ export default function Stainless() {
               quality materials, practical design, and customer satisfaction
               makes us a preferred choice in Delhi.
             </motion.p>
+
+            {/* FAQs */}
+            <div className="mt-12 pt-8 border-t border-gray-200">
+              <motion.h2
+                initial={{ opacity: 0, y: 16 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+                className="text-2xl sm:text-3xl font-bold text-gray-800 mb-6"
+              >
+                Frequently Asked Questions
+              </motion.h2>
+
+              <div className="space-y-6">
+                {faqs.map((faq, index) => (
+                  <motion.div
+                    key={faq.q}
+                    initial={{ opacity: 0, y: 16 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: index * 0.05 }}
+                    className="space-y-2"
+                  >
+                    <h3 className="font-bold text-gray-800 text-lg lg:text-xl">
+                      {index + 1}. {faq.q}
+                    </h3>
+                    <p className="text-[17px] lg:text-[18px] text-gray-700">
+                      {faq.a}
+                    </p>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
           </div>
         </section>
       </div>
