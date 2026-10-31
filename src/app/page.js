@@ -1,5 +1,6 @@
 import AboutCommercialSection from "@/sections/AboutCommercialSection";
 import ClientsSection from "@/sections/ClientsSection";
+import FaqSection from "@/sections/FaqSection";
 import HomeBanner from "@/sections/Homebanner";
 import OurWorkSection from "@/sections/OurWorkSection";
 import WelcomeSection from "@/sections/WelcomeSection";
@@ -29,6 +30,7 @@ function Page() {
         <OurWorkSection />
         <ClientsSection />
         <AboutCommercialSection />
+        <FaqSection />
       </div>
     </main>
   );

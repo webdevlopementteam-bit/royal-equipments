@@ -6,14 +6,188 @@ import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
+const counterTypes = [
+  {
+    name: "Cold display counter",
+    text: "Has a cooling system inside. Best for milk sweets like rasmalai, rasgulla, kalakand, milk cake and sandesh, which spoil fast at room temperature.",
+  },
+  {
+    name: "Normal (dry) display counter",
+    text: "No cooling. Good for dry sweets like kaju katli, soan papdi, ladoo and namkeen.",
+  },
+  {
+    name: "Hot and cold counter",
+    text: "One part stays cool and one part stays warm. Useful if you sell sweets along with hot snacks like samosa or kachori.",
+  },
+  {
+    name: "Curved glass counter",
+    text: "The front glass is bent, so customers get a wide, clear view. Popular in premium shops.",
+  },
+  {
+    name: "Straight glass counter",
+    text: "Flat front glass. Saves space and is easy to clean.",
+  },
+  {
+    name: "Corian top counter",
+    text: "A smooth, premium-looking top that is easy to wipe.",
+  },
+  {
+    name: "L-shape and corner counters",
+    text: "Fit into shop corners and give more display area on the same floor.",
+  },
+];
+
+const sizeOptions = [
+  { option: "Length", choices: "4 ft, 5 ft, 6 ft or custom" },
+  { option: "Shelves", choices: "2, 3 or 4 levels" },
+  { option: "Type", choices: "Cold, normal, or hot and cold" },
+  { option: "Body", choices: "Stainless steel (SS 202 or SS 304)" },
+  { option: "Top", choices: "Stainless steel, granite or Corian" },
+  { option: "Front glass", choices: "Curved or straight toughened glass" },
+  { option: "Lighting", choices: "LED lights on each shelf" },
+  { option: "Price", choices: "Quoted on size, type and steel grade" },
+];
+
+const chooseQuestions = [
+  {
+    q: "What do you sell most?",
+    a: "If most of your sweets are milk-based, choose a cold counter. If they are mostly dry, a normal counter saves money and electricity.",
+  },
+  {
+    q: "How much space do you have?",
+    a: "Measure the length of your shop front. Leave enough room behind the counter for staff to move.",
+  },
+  {
+    q: "Which steel do you need?",
+    a: "SS 304 resists rust better and suits cold counters and wet areas. SS 202 costs less and works well for dry counters.",
+  },
+  {
+    q: "How many varieties do you show?",
+    a: "More items need more shelves or a longer counter.",
+  },
+  {
+    q: "What is your budget?",
+    a: "Share it with us and we will suggest the best option within it.",
+  },
+];
+
+const whyChoose = [
+  {
+    title: "In business since 2001",
+    text: "We have over 25 years of experience in commercial kitchen and display equipment.",
+  },
+  {
+    title: "We make it ourselves",
+    text: "As a sweet display counter manufacturer, not just a trader, we can change the size, shelves, glass and finish for you.",
+  },
+  {
+    title: "Complete service",
+    text: "Site visit, design, manufacturing, delivery and installation, all from one team.",
+  },
+  {
+    title: "One supplier for your whole shop",
+    text: "We also make cake and pastry display counters, refrigeration and bakery equipment.",
+  },
+  {
+    title: "Warranty",
+    text: "Every counter comes with a warranty. Ask our team for the details of your model.",
+  },
+  {
+    title: "Delivery time",
+    text: "We share a clear delivery date along with your quote.",
+  },
+  {
+    title: "After-sales support",
+    text: "Our team helps with service and repairs after installation.",
+  },
+];
+
+const workSteps = [
+  {
+    title: "Talk to us",
+    text: "Call or WhatsApp us with your shop size and the sweets you sell.",
+  },
+  {
+    title: "Design and quote",
+    text: "We share a simple drawing and a clear price.",
+  },
+  {
+    title: "Manufacturing",
+    text: "We build your counter in our unit and check its quality before dispatch.",
+  },
+  {
+    title: "Delivery and installation",
+    text: "Our team delivers the counter and sets it up at your shop.",
+  },
+  {
+    title: "Support",
+    text: "We stay in touch for service and spare parts.",
+  },
+];
+
+const faqs = [
+  {
+    q: "Who is a good sweet display counter manufacturer in Delhi?",
+    a: "Royal Equipments is a sweet display counter manufacturer in Delhi, working since 2001. It makes cold, normal, and hot and cold sweet counters in custom sizes. The company handles design, manufacturing, delivery and installation from its unit near Dwarka Mor, New Delhi.",
+  },
+  {
+    q: "What is the price of a sweet display counter in Delhi?",
+    a: "The price of a sweet display counter in Delhi depends on its size, type and material. Cold counters cost more than normal counters, and SS 304 costs more than SS 202. Royal Equipments gives an exact quote once it knows your shop size, counter type and steel grade.",
+  },
+  {
+    q: "Which sweet counter is best for milk sweets?",
+    a: "A cold display counter is best for milk sweets like rasmalai, rasgulla and kalakand. It keeps them cool and fresh for longer. For dry sweets like kaju katli and ladoo, a normal counter without cooling is enough.",
+  },
+  {
+    q: "What size of sweet display counter should I buy?",
+    a: "The most common sizes are 4, 5 and 6 feet long, with 2 to 4 shelves. Choose the size based on your shop front length and how many sweet varieties you sell. Royal Equipments also makes custom sizes and L-shape counters for corners.",
+  },
+  {
+    q: "How long does it take to make and deliver a sweet display counter?",
+    a: "Delivery time depends on the size and design of the counter. Royal Equipments shares a clear delivery date with the quote, once the design is final. Custom designs may take a little longer.",
+  },
+];
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((faq) => ({
+    "@type": "Question",
+    name: faq.q,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: faq.a,
+    },
+  })),
+};
+
+const WHATSAPP_URL = "https://wa.me/919310010882";
+
+// Cake-only products that should not appear on the sweet counter page
+const hiddenProducts = [
+  "Curved Display Counter",
+  "Curved Display Counter With Corien",
+  "Vertical Cake Showcase",
+];
+
+const sweetCounters = cakePastryDisplayCounters.filter(
+  (item) => !hiddenProducts.includes(item.name),
+);
+
 export default function Sweet() {
   return (
     <div className="bg-white">
+      {/* Google SEO Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+
       <div className="bg-white pb-4 md:pb-10">
         <ProductBreadcrumb currentProduct={"Sweet Display Counters"} />
 
         <div className="max-w-6xl mx-auto px-4 sm:px-6 grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 my-6">
-          {cakePastryDisplayCounters.map((item, idx) => (
+          {sweetCounters.map((item, idx) => (
             <motion.div
               key={idx}
               initial={{ opacity: 0, scale: 0.85, y: 20 }}
@@ -74,225 +248,174 @@ export default function Sweet() {
       <section className="max-w-4xl mx-auto px-4 py-12 text-gray-800 ">
         {/* Main Heading */}
         <h1 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900">
-          Sweet Display Counter Manufacturer in Delhi
+          Sweet Display Counter Manufacturer in Delhi - Royal Equipments
         </h1>
 
-        {/* Paragraph 1 */}
         <p className="text-[17px] md:text-[19px] leading-relaxed mb-6">
-          A <strong>Sweet Display Counter</strong> is an essential piece of
-          equipment for sweet shops, bakeries, confectionery stores, and dessert
-          outlets. It helps businesses display a wide variety of sweets in an
-          attractive, organized, and hygienic way. A well-designed display
-          counter not only improves the presentation of sweets but also helps
-          maintain their freshness for longer periods.
-        </p>
-
-        {/* Paragraph 2 with Link */}
-        <p className="text-[17px] md:text-[19px] leading-relaxed mb-6">
-          If you are searching for a reliable{" "}
+          <strong>Royal Equipments</strong> is a{" "}
           <Link
-            href="https://www.royalequipments.in/contact-us/"
+            href="/contact-us/"
             className="text-blue-600 hover:text-blue-950 font-semibold transition-colors"
           >
-            Sweet Display Counter Manufacturer
+            sweet display counter manufacturer in Delhi
           </Link>
-          , it is important to choose a company that focuses on quality,
-          durability, and modern design. A high-quality display counter enhances
-          the look of your shop and attracts customers by showcasing sweets in
-          the best possible way.
+          . Since 2001, we have made display counters for sweet shops, bakeries,
+          restaurants and hotels. Our office is near Dwarka Mor Metro Station,
+          New Delhi. We design, build, deliver and install every counter
+          ourselves.
         </p>
 
-        {/* Paragraph 3 */}
         <p className="text-[17px] md:text-[19px] leading-relaxed mb-8">
-          Royal Equipments is a trusted{" "}
-          <strong>Sweet Display Counter Manufacturer in Delhi</strong>, known
-          for providing high-quality counters designed for sweet shops and
-          bakery businesses. The company manufactures durable and stylish
-          display counters that help businesses present their products
-          professionally while maintaining proper hygiene and storage
-          conditions.
+          A good sweet counter does two jobs. It keeps your sweets fresh and
+          safe from dust and flies. It also makes them look good, so customers
+          buy more. We build counters that do both, in the size and style your
+          shop needs.
         </p>
 
-        {/* Subheading: Why Sweet Display Counters Are Important */}
+        {/* Types */}
         <h2 className="text-2xl font-bold mb-4 text-gray-900">
-          Why Sweet Display Counters Are Important for Sweet Shops
-        </h2>
-        <p className="text-[17px] md:text-[19px] leading-relaxed mb-6">
-          In the food industry, presentation plays a major role in influencing
-          customer choices. When sweets are displayed neatly in a glass display
-          counter with proper lighting, they look more attractive and tempting
-          to customers.
-        </p>
-        <p className="text-[17px] md:text-[19px] leading-relaxed mb-8">
-          A sweet display counter also protects sweets from dust, insects, and
-          contamination. Many modern counters are equipped with refrigeration
-          systems that maintain the ideal temperature for storing sweets safely.
-          This helps shop owners keep their products fresh and maintain quality
-          throughout the day.
-        </p>
-
-        {/* Subheading: Features */}
-        <h2 className="text-2xl font-bold mb-4 text-gray-900">
-          Features of High-Quality Sweet Display Counters
-        </h2>
-        <p className="text-[17px] md:text-[19px] leading-relaxed mb-6">
-          A professional <strong>Sweet Display Counter Manufacturer</strong>{" "}
-          focuses on designing counters with features that make them suitable
-          for commercial use.
-        </p>
-
-        <h3 className="text-xl font-semibold mb-2 text-gray-950">
-          Strong and Durable Build
-        </h3>
-        <p className="text-[17px] md:text-[19px] leading-relaxed mb-6">
-          Sweet display counters are usually made with stainless steel and
-          toughened glass. This ensures durability, corrosion resistance, and
-          easy cleaning.
-        </p>
-
-        <h3 className="text-xl font-semibold mb-2 text-gray-950">
-          Efficient Cooling System
-        </h3>
-        <p className="text-[17px] md:text-[19px] leading-relaxed mb-6">
-          Refrigerated sweet display counters maintain the right temperature,
-          which helps preserve the taste and freshness of sweets.
-        </p>
-
-        <h3 className="text-xl font-semibold mb-2 text-gray-950">
-          Attractive Design
-        </h3>
-        <p className="text-[17px] md:text-[19px] leading-relaxed mb-6">
-          Modern display counters come with stylish designs that improve the
-          overall appearance of sweet shops and bakeries.
-        </p>
-
-        <h3 className="text-xl font-semibold mb-2 text-gray-950">
-          LED Lighting
-        </h3>
-        <p className="text-[17px] md:text-[19px] leading-relaxed mb-6">
-          Bright LED lights enhance the visibility of sweets and make them look
-          more appealing to customers.
-        </p>
-
-        <h3 className="text-xl font-semibold mb-2 text-gray-950">
-          Multiple Storage Shelves
-        </h3>
-        <p className="text-[17px] md:text-[19px] leading-relaxed mb-8">
-          These counters provide multiple levels of storage so shop owners can
-          display different varieties of sweets in an organized manner.
-        </p>
-
-        {/* Applications */}
-        <h2 className="text-2xl font-bold mb-4 text-gray-900">
-          Applications of Sweet Display Counters
+          Types of Sweet Display Counters We Make
         </h2>
         <p className="text-[17px] md:text-[19px] leading-relaxed mb-4">
-          Sweet display counters are widely used in many food businesses,
-          including:
+          Every sweet shop sells different items. As a{" "}
+          <strong>sweet display counter manufacturer</strong>, we make a counter
+          for each need.
         </p>
-        <ul className="list-disc pl-6 text-[17px] md:text-[19px] space-y-2 mb-6">
-          <li>Sweet Shops</li>
-          <li>Bakeries</li>
-          <li>Confectionery Stores</li>
-          <li>Restaurants</li>
-          <li>Cafeterias</li>
-          <li>Supermarkets</li>
+        <ul className="list-disc pl-6 text-[17px] md:text-[19px] leading-relaxed space-y-2 mb-8">
+          {counterTypes.map((type) => (
+            <li key={type.name}>
+              <strong>{type.name}:</strong> {type.text}
+            </li>
+          ))}
         </ul>
-        <p className="text-[17px] md:text-[19px] leading-relaxed mb-8">
-          They help maintain hygiene, improve product visibility, and create a
-          professional environment that encourages customers to make purchases.
+
+        {/* Sizes and Options */}
+        <h2 className="text-2xl font-bold mb-4 text-gray-900">
+          Sizes and Options
+        </h2>
+        <p className="text-[17px] md:text-[19px] leading-relaxed mb-4">
+          Common lengths are 4, 5 and 6 feet. We can also join sections for a
+          longer counter or make a custom size that fits your shop exactly.
         </p>
+        <div className="overflow-x-auto mb-8 rounded-lg border border-gray-200">
+          <table className="w-full text-left text-[16px] md:text-[18px]">
+            <thead className="bg-[#080949] text-white">
+              <tr>
+                <th className="px-4 py-3 font-semibold">Option</th>
+                <th className="px-4 py-3 font-semibold">Choices</th>
+              </tr>
+            </thead>
+            <tbody>
+              {sizeOptions.map((row) => (
+                <tr
+                  key={row.option}
+                  className="border-t border-gray-200 even:bg-gray-50"
+                >
+                  <td className="px-4 py-3 font-semibold text-gray-900">
+                    {row.option}
+                  </td>
+                  <td className="px-4 py-3">{row.choices}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
+        {/* How to Choose */}
+        <h2 className="text-2xl font-bold mb-4 text-gray-900">
+          How to Choose the Right Sweet Counter
+        </h2>
+        <p className="text-[17px] md:text-[19px] leading-relaxed mb-4">
+          Ask yourself these five questions before you buy:
+        </p>
+        <ol className="list-decimal pl-6 text-[17px] md:text-[19px] leading-relaxed space-y-2 mb-8">
+          {chooseQuestions.map((item) => (
+            <li key={item.q}>
+              <strong>{item.q}</strong> {item.a}
+            </li>
+          ))}
+        </ol>
 
         {/* Why Choose Royal Equipments */}
         <h2 className="text-2xl font-bold mb-4 text-gray-900">
-          Why Choose Royal Equipments?
+          Why Choose Royal Equipments
         </h2>
-        <p className="text-[17px] md:text-[19px] leading-relaxed mb-6">
-          <Link
-            href="https://www.royalequipments.in/contact-us/"
-            className="text-blue-600 hover:text-blue-950 font-semibold transition-colors"
-          >
-            Choosing the right Sweet Display Counter Manufacturer in Delhi
-          </Link>{" "}
-          is important for ensuring long-lasting performance and reliability.
-          Royal Equipments manufactures high-quality display counters using
-          advanced technology and premium materials.
-        </p>
-        <p className="text-[17px] md:text-[19px] leading-relaxed mb-6">
-          Their counters are designed to meet the needs of modern sweet shops by
-          providing strong construction, efficient cooling systems, and
-          attractive designs. The company also offers customization options so
-          businesses can choose the size and design that best suits their shop
-          layout.
-        </p>
+        <ul className="list-disc pl-6 text-[17px] md:text-[19px] leading-relaxed space-y-2 mb-8">
+          {whyChoose.map((item) => (
+            <li key={item.title}>
+              <strong>{item.title}:</strong> {item.text}
+            </li>
+          ))}
+        </ul>
+
+        {/* How We Work */}
+        <h2 className="text-2xl font-bold mb-4 text-gray-900">How We Work</h2>
+        <ol className="list-decimal pl-6 text-[17px] md:text-[19px] leading-relaxed space-y-2 mb-8">
+          {workSteps.map((step) => (
+            <li key={step.title}>
+              <strong>{step.title}:</strong> {step.text}
+            </li>
+          ))}
+        </ol>
+
+        {/* Areas We Serve */}
+        <h2 className="text-2xl font-bold mb-4 text-gray-900">
+          Areas We Serve
+        </h2>
         <p className="text-[17px] md:text-[19px] leading-relaxed mb-8">
-          With a focus on quality, durability, and customer satisfaction, Royal
-          Equipments has become a trusted choice for businesses looking for
-          reliable sweet display counters. Investing in a high-quality sweet
-          display counter helps improve product presentation, maintain hygiene,
-          and attract more customers to your shop.
+          As a <strong>Sweet Display Counter Manufacturer in Delhi</strong>, we
+          supply counters across Delhi NCR, including Dwarka, Rohini, Karol
+          Bagh, Lajpat Nagar, Saket and Connaught Place. Call us to check
+          delivery to your area.
         </p>
+
+        {/* Get a Free Quote */}
+        <div className="bg-gray-50 border border-gray-200 rounded-xl p-6 mb-10">
+          <h2 className="text-2xl font-bold mb-4 text-gray-900">
+            Get a Free Quote
+          </h2>
+          <p className="text-[17px] md:text-[19px] leading-relaxed mb-5">
+            Looking for a trusted sweet display counter manufacturer? Call
+            Royal Equipments at{" "}
+            <a
+              href="tel:+919310010882"
+              className="text-blue-600 hover:text-blue-950 font-semibold transition-colors"
+            >
+              +91 9310010882
+            </a>
+            , or send us your shop size and sweet list on{" "}
+            <a
+              href={WHATSAPP_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-600 hover:text-blue-950 font-semibold transition-colors"
+            >
+              WhatsApp
+            </a>
+            . We will suggest the right counter and share a quote.
+          </p>
+          <Link
+            href="/contact-us/"
+            className="inline-block bg-[#2F3192] hover:bg-[#080949] text-white font-semibold px-6 py-3 rounded-lg transition-colors"
+          >
+            Get a Quote
+          </Link>
+        </div>
 
         {/* FAQ Section */}
-        <h2 className="text-2xl font-bold mb-6 text-gray-900">
-          Frequently Asked Questions
-        </h2>
+        <h2 className="text-2xl font-bold mb-6 text-gray-900">FAQs</h2>
 
         <div className="space-y-6">
-          <div>
-            <h3 className="text-xl font-semibold mb-2 text-gray-950">
-              1. What is a sweet display counter used for?
-            </h3>
-            <p className="text-[17px] md:text-[19px] leading-relaxed">
-              A sweet display counter is used in sweet shops and bakeries to
-              display and store sweets hygienically while keeping them fresh and
-              attractive for customers.
-            </p>
-          </div>
-
-          <div>
-            <h3 className="text-xl font-semibold mb-2 text-gray-950">
-              2. What are the benefits of using a refrigerated sweet display
-              counter?
-            </h3>
-            <p className="text-[17px] md:text-[19px] leading-relaxed">
-              A refrigerated counter helps maintain proper temperature, which
-              keeps sweets fresh for a longer time and prevents spoilage.
-            </p>
-          </div>
-
-          <div>
-            <h3 className="text-xl font-semibold mb-2 text-gray-950">
-              3. What materials are used in sweet display counters?
-            </h3>
-            <p className="text-[17px] md:text-[19px] leading-relaxed">
-              Most sweet display counters are made using stainless steel bodies
-              with toughened glass panels for durability, hygiene, and clear
-              visibility.
-            </p>
-          </div>
-
-          <div>
-            <h3 className="text-xl font-semibold mb-2 text-gray-950">
-              4. How do I choose the best sweet display counter for my shop?
-            </h3>
-            <p className="text-[17px] md:text-[19px] leading-relaxed">
-              You should consider factors like size, storage capacity, cooling
-              system, energy efficiency, and design before choosing a display
-              counter.
-            </p>
-          </div>
-
-          <div>
-            <h3 className="text-xl font-semibold mb-2 text-gray-950">
-              5. Who is a reliable Sweet Display Counter Manufacturer in Delhi?
-            </h3>
-            <p className="text-[17px] md:text-[19px] leading-relaxed">
-              Royal Equipments is known for manufacturing high-quality sweet
-              display counters designed for durability, attractive display, and
-              efficient cooling.
-            </p>
-          </div>
+          {faqs.map((faq, index) => (
+            <div key={faq.q}>
+              <h3 className="text-xl font-semibold mb-2 text-gray-950">
+                {index + 1}. {faq.q}
+              </h3>
+              <p className="text-[17px] md:text-[19px] leading-relaxed">
+                {faq.a}
+              </p>
+            </div>
+          ))}
         </div>
       </section>
     </div>
